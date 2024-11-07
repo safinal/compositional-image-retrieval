@@ -4,3 +4,4 @@ sample_evaluation/
 dataset.zip
 sample_evaluation.zip
 test.ipynb
+__pycache__/
