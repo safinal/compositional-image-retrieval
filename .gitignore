@@ -1,1 +1,6 @@
 venv/
+dataset/
+sample_evaluation/
+dataset.zip
+sample_evaluation.zip
+test.ipynb
