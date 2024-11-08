@@ -1,7 +1,6 @@
 import numpy as np
 import pandas as pd
 import torch
-import torchvision
 from PIL import Image
 
 from model import Model
@@ -20,7 +19,7 @@ def encode_queries(df: pd.DataFrame) -> np.ndarray:
     np.ndarray: Embeddings array (num_queries, embedding_dim)
     """
     batch_size = 1024
-    device = 'cuda'
+    device = "cuda" if torch.cuda.is_available() else "mps"
     model = Model().to(device)
     all_embeddings = []
     for i in range(0, len(df), batch_size):
@@ -48,7 +47,7 @@ def encode_database(df: pd.DataFrame) -> np.ndarray :
     np.ndarray: Embeddings array (num_images, embedding_dim)
     """
     batch_size = 1024
-    device = 'cuda'
+    device = "cuda" if torch.cuda.is_available() else "mps"
     model = Model().to(device)
     all_embeddings = []
     for i in range(0, len(df), batch_size):
