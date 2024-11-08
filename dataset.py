@@ -2,17 +2,21 @@ import torch
 import torchvision
 import pandas as pd
 import os
-import open_clip
 from PIL import Image
 
 from model import Model
 
 
+SPLIT_RATIO = 0.8
+IMAGE_ROOT_DIR = os.path.join('dataset', 'images')
+ANNOTATIONS_FILE_PATH = os.path.join('dataset', 'data.csv')
+
 class RetrievalDataset(torch.utils.data.Dataset):
-    def __init__(self, img_dir_path: str = os.path.join('dataset', 'images'), annotations_file_path: str = os.path.join('dataset', 'data.csv'), transform=None) -> None:
+    def __init__(self, img_dir_path: str = IMAGE_ROOT_DIR, annotations_file_path: str = ANNOTATIONS_FILE_PATH, transform=None, split=None) -> None:
         self.img_dir_path = img_dir_path
-        self.annotations = pd.read_csv(annotations_file_path)
         self.transform = transform
+        self.split = split
+        self.annotations = self.split_data(pd.read_csv(annotations_file_path).drop(columns=["Unnamed: 0"]))
     
     def __len__(self) -> int:
         return len(self.annotations)
@@ -29,6 +33,20 @@ class RetrievalDataset(torch.utils.data.Dataset):
             query_img = self.transform(query_img)
             target_img = self.transform(target_img)
         return query_img, query_text, target_img
+    
+    def split_data(self, annotations):
+        shuffled_df = annotations.sample(frac=1, random_state=42).reset_index(drop=True)
+        if not self.split:
+            return shuffled_df # sample test set
+        elif self.split == "train":
+            return shuffled_df.iloc[:int(SPLIT_RATIO * len(shuffled_df))] # train set
+        return shuffled_df.iloc[int(SPLIT_RATIO * len(shuffled_df)):] # validation set
+
+    def load_queries(self):
+        return self.annotations.drop(columns=["target_image"])
+    
+    def load_database(self):
+        return self.annotations[["target_image"]]
 
 
 model = Model()
@@ -39,5 +57,5 @@ transform = torchvision.transforms.v2.Compose([
     torchvision.transforms.v2.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]),
 ])
 
-dataset = RetrievalDataset(transform=model.processor if hasattr(model, 'processor') else transform)
-train_dataset, val_dataset = torch.utils.data.random_split(dataset=dataset, lengths=[0.8, 0.2])
+train_dataset = RetrievalDataset(transform=model.processor if hasattr(model, 'processor') else transform, split='train')
+val_dataset = RetrievalDataset(transform=model.processor if hasattr(model, 'processor') else transform, split='validation')
