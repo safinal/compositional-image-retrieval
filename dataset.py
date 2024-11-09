@@ -1,30 +1,36 @@
-import torch
-import torchvision
-import pandas as pd
 import os
-from PIL import Image
 
-from model import Model
+import torch
+import torchvision.transforms as transforms
+import pandas as pd
+from PIL import Image
 
 
 SPLIT_RATIO = 0.8
 IMAGE_ROOT_DIR = os.path.join('dataset', 'images')
 ANNOTATIONS_FILE_PATH = os.path.join('dataset', 'data.csv')
 
+
 class RetrievalDataset(torch.utils.data.Dataset):
-    def __init__(self, img_dir_path: str = IMAGE_ROOT_DIR, annotations_file_path: str = ANNOTATIONS_FILE_PATH, transform=None, split=None) -> None:
+    def __init__(self, img_dir_path: str, annotations_file_path: str, split: str, transform=None) -> None:
         self.img_dir_path = img_dir_path
         self.transform = transform
         self.split = split
-        self.annotations = self.split_data(pd.read_csv(annotations_file_path).drop(columns=["Unnamed: 0"]))
+        self.annotations = self.split_data(
+            self.data_health_check(
+                self.convert_image_names_to_path(
+                    pd.read_csv(annotations_file_path)
+                )
+            )
+        )
     
     def __len__(self) -> int:
         return len(self.annotations)
 
     def __getitem__(self, idx: int) -> tuple:
-        query_img_path = os.path.join(self.img_dir_path, self.annotations.iloc[idx]['query_image'])
+        query_img_path = self.annotations.iloc[idx]['query_image']
         query_text = self.annotations.iloc[idx]['query_text']
-        target_img_path = os.path.join(self.img_dir_path, self.annotations.iloc[idx]['target_image'])
+        target_img_path = self.annotations.iloc[idx]['target_image']
         query_img = Image.open(query_img_path)
         target_img = Image.open(target_img_path)
         # query_img = torchvision.io.read_image(path=query_img_path, mode=torchvision.io.image.ImageReadMode.RGB)
@@ -36,7 +42,7 @@ class RetrievalDataset(torch.utils.data.Dataset):
     
     def split_data(self, annotations):
         shuffled_df = annotations.sample(frac=1, random_state=42).reset_index(drop=True)
-        if not self.split:
+        if self.split == "test":
             return shuffled_df # sample test set
         elif self.split == "train":
             return shuffled_df.iloc[:int(SPLIT_RATIO * len(shuffled_df))] # train set
@@ -47,15 +53,26 @@ class RetrievalDataset(torch.utils.data.Dataset):
     
     def load_database(self):
         return self.annotations[["target_image"]]
+    
+    def convert_image_names_to_path(self, df):
+        df["query_image"] = self.img_dir_path + "/" + df["query_image"]
+        df["target_image"] = self.img_dir_path + "/" + df["target_image"]
+        return df
+    
+    def data_health_check(self, annotations):
+        img_files = os.listdir(self.img_dir_path)
+        broken_files = [img for img in img_files if self.is_truncated(os.path.join(self.img_dir_path, img))]
+        annotations = annotations[
+            ~annotations['target_image'].isin(broken_files) &
+            ~annotations['query_image'].isin(broken_files)
+        ]
+        return annotations
+    
+    def is_truncated(self, image_path):
+        try:
+            with Image.open(image_path) as img:
+                img.verify()
+            return False
+        except (IOError, SyntaxError, Image.DecompressionBombError) as e:
+            return True
 
-
-model = Model()
-
-
-transform = torchvision.transforms.v2.Compose([
-    torchvision.transforms.v2.ToDtype(torch.float32, scale=True),
-    torchvision.transforms.v2.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]),
-])
-
-train_dataset = RetrievalDataset(transform=model.processor if hasattr(model, 'processor') else transform, split='train')
-val_dataset = RetrievalDataset(transform=model.processor if hasattr(model, 'processor') else transform, split='validation')
