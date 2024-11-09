@@ -2,7 +2,8 @@ import os
 import numpy as np
 
 import torch
-import torchvision.transforms as transforms
+import torchvision
+from torchvision.transforms import v2
 from sklearn.metrics.pairwise import cosine_similarity
 
 from model import Model
@@ -17,14 +18,14 @@ TEST_ROOT_DIR = os.path.join('sample_evaluation', 'images')
 TEST_ANNOTATIONS_FILE_PATH = os.path.join('sample_evaluation', 'data.csv')
 
 batch_size = 1024
-device = "cuda" if torch.cuda.is_available() else "mps"
-model = Model(pretrained=None).to(device)
-model.load('weights.pth')
+device = torch.device("cuda" if torch.cuda.is_available() else "mps")
+# model = Model(pretrained=None).to(device)
+model = Model().to(device)
+# model.load('weights.pth')
 
-transform = transforms.Compose([
-    transforms.ToTensor(),  # Converts the image to a tensor
-    transforms.Lambda(lambda x: x.to(torch.float32)),  # Casts to float32
-    transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]),  # Normalization
+transform = v2.Compose([
+    v2.ToDtype(torch.float32, scale=True),
+    v2.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]),
 ])
 
 train_dataset = RetrievalDataset(

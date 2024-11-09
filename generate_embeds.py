@@ -7,11 +7,6 @@ from PIL import Image
 from model import Model
 
 
-batch_size = 1024
-device = "cuda" if torch.cuda.is_available() else "mps"
-model = Model(pretrained=None).to(device)
-model.load('weights.pth')
-
 def encode_queries(df: pd.DataFrame) -> np.ndarray:
     """
     Process query pairs and generate embeddings.
@@ -24,6 +19,11 @@ def encode_queries(df: pd.DataFrame) -> np.ndarray:
     Returns:
     np.ndarray: Embeddings array (num_queries, embedding_dim)
     """
+    batch_size = 1024
+    device = torch.device("cuda" if torch.cuda.is_available() else "mps")
+    # model = Model(pretrained=None).to(device)
+    model = Model().to(device)
+    # model.load('weights.pth')
     all_embeddings = []
     for i in tqdm(range(0, len(df), batch_size)):
         query_imgs = torch.stack([model.processor(Image.open(query_image_path)) for query_image_path in df['query_image'][i:i+batch_size]]).to(device)
@@ -49,6 +49,11 @@ def encode_database(df: pd.DataFrame) -> np.ndarray :
     Returns:
     np.ndarray: Embeddings array (num_images, embedding_dim)
     """
+    batch_size = 1024
+    device = torch.device("cuda" if torch.cuda.is_available() else "mps")
+    # model = Model(pretrained=None).to(device)
+    model = Model().to(device)
+    # model.load('weights.pth')
     all_embeddings = []
     for i in tqdm(range(0, len(df), batch_size)):
         target_imgs = torch.stack([model.processor(Image.open(target_image_path)) for target_image_path in df['target_image'][i:i+batch_size]]).to(device)

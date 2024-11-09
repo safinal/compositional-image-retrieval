@@ -1,21 +1,17 @@
 import os
-
+import numpy as np
 import torch
-import torchvision.transforms as transforms
+from torchvision.transforms import v2
 import pandas as pd
 from PIL import Image
 
 
-SPLIT_RATIO = 0.8
-IMAGE_ROOT_DIR = os.path.join('dataset', 'images')
-ANNOTATIONS_FILE_PATH = os.path.join('dataset', 'data.csv')
-
-
 class RetrievalDataset(torch.utils.data.Dataset):
-    def __init__(self, img_dir_path: str, annotations_file_path: str, split: str, transform=None) -> None:
+    def __init__(self, img_dir_path: str, annotations_file_path: str, split: str, split_ratio: float, transform=None) -> None:
         self.img_dir_path = img_dir_path
         self.transform = transform
         self.split = split
+        self.split_ratio = split_ratio
         self.annotations = self.split_data(
             self.data_health_check(
                 self.convert_image_names_to_path(
@@ -31,22 +27,25 @@ class RetrievalDataset(torch.utils.data.Dataset):
         query_img_path = self.annotations.iloc[idx]['query_image']
         query_text = self.annotations.iloc[idx]['query_text']
         target_img_path = self.annotations.iloc[idx]['target_image']
-        query_img = Image.open(query_img_path)
-        target_img = Image.open(target_img_path)
+        query_img = Image.open(query_img_path).convert('RGB')
+        target_img = Image.open(target_img_path).convert('RGB')
         # query_img = torchvision.io.read_image(path=query_img_path, mode=torchvision.io.image.ImageReadMode.RGB)
         # target_img = torchvision.io.read_image(path=target_img_path, mode=torchvision.io.image.ImageReadMode.RGB)
         if self.transform:
             query_img = self.transform(query_img)
             target_img = self.transform(target_img)
+        
         return query_img, query_text, target_img
     
     def split_data(self, annotations):
         shuffled_df = annotations.sample(frac=1, random_state=42).reset_index(drop=True)
         if self.split == "test":
             return shuffled_df # sample test set
-        elif self.split == "train":
-            return shuffled_df.iloc[:int(SPLIT_RATIO * len(shuffled_df))] # train set
-        return shuffled_df.iloc[int(SPLIT_RATIO * len(shuffled_df)):] # validation set
+        if self.split == "train":
+            return shuffled_df.iloc[:int(self.split_ratio * len(shuffled_df))] # train set
+        if self.split == "validation":
+            return shuffled_df.iloc[int(self.split_ratio * len(shuffled_df)):] # validation set
+        raise Exception("split is not valid")
 
     def load_queries(self):
         return self.annotations.drop(columns=["target_image"])
@@ -76,3 +75,40 @@ class RetrievalDataset(torch.utils.data.Dataset):
         except (IOError, SyntaxError, Image.DecompressionBombError) as e:
             return True
 
+def create_dataloader(
+        img_dir_path: str,
+        annotations_file_path: str,
+        split: str,
+        split_ratio: float,
+        batch_size: int,
+        num_workers: int,
+    ):
+    if split == 'train':
+        transform = v2.Compose([
+            v2.RandomResizedCrop(224, scale=(0.8, 1.0)),
+            v2.RandomHorizontalFlip(),
+            v2.ColorJitter(brightness=0.2, contrast=0.2, saturation=0.2),
+            v2.ToImage(),
+            v2.ToDtype(torch.float32, scale=True),
+            v2.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])
+        ])
+    else:
+        transform = v2.Compose([
+            v2.Resize(256),
+            v2.CenterCrop(224),
+            v2.ToImage(),
+            v2.ToDtype(torch.float32, scale=True),
+            v2.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])
+        ])
+    
+    dataset = RetrievalDataset(
+        img_dir_path=img_dir_path,
+        annotations_file_path=annotations_file_path,
+        split=split,
+        split_ratio=split_ratio,
+        transform=transform
+    )
+
+    loader = torch.utils.data.DataLoader(dataset, batch_size=batch_size, shuffle=True, num_workers=num_workers)
+    
+    return loader
