@@ -1,7 +1,6 @@
 import os
 import numpy as np
 import torch
-from torchvision.transforms import v2
 import pandas as pd
 from PIL import Image
 
@@ -82,25 +81,8 @@ def create_dataloader(
         split_ratio: float,
         batch_size: int,
         num_workers: int,
+        transform
     ):
-    if split == 'train':
-        transform = v2.Compose([
-            v2.RandomResizedCrop(224, scale=(0.8, 1.0)),
-            v2.RandomHorizontalFlip(),
-            v2.ColorJitter(brightness=0.2, contrast=0.2, saturation=0.2),
-            v2.ToImage(),
-            v2.ToDtype(torch.float32, scale=True),
-            v2.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])
-        ])
-    else:
-        transform = v2.Compose([
-            v2.Resize(256),
-            v2.CenterCrop(224),
-            v2.ToImage(),
-            v2.ToDtype(torch.float32, scale=True),
-            v2.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])
-        ])
-    
     dataset = RetrievalDataset(
         img_dir_path=img_dir_path,
         annotations_file_path=annotations_file_path,

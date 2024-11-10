@@ -4,7 +4,7 @@ from torchvision.transforms import v2
 from tqdm import tqdm
 
 from model import Model
-
+from evaluation import evaluate
 
 class InfoNCELoss(torch.nn.Module):
     def __init__(self, temperature=0.07):
@@ -81,14 +81,14 @@ def train_epoch(model, train_loader, criterion, optimizer, device):
     
     return total_loss / len(train_loader)
 
-def validate(model, val_loader, criterion, device):
+def validate(model, loader, criterion, device):
     model.eval()
     total_loss = 0
     correct = 0
     total = 0
     
     with torch.no_grad():
-        for query_imgs, query_texts, target_imgs in tqdm(val_loader, desc="Validation"):
+        for query_imgs, query_texts, target_imgs in tqdm(loader, desc="Validation"):
             # Move data to device
             query_imgs = query_imgs.to(device)
             target_imgs = target_imgs.to(device)
@@ -108,7 +108,7 @@ def validate(model, val_loader, criterion, device):
             correct += (predictions == labels).sum().item()
             total += len(predictions)
     
-    return total_loss / len(val_loader), correct / total
+    return total_loss / len(loader), correct / total
 
 def train_model(model, device, train_loader, val_loader, num_epochs=10):
     # Initialize criterion and optimizer
@@ -140,6 +140,7 @@ def train_model(model, device, train_loader, val_loader, num_epochs=10):
         
         # Validate
         val_loss, val_acc = validate(model, val_loader, criterion, device)
+        evaluate(model, val_loader)
         
         print(f"Training Loss: {train_loss:.4f}")
         print(f"Validation Loss: {val_loss:.4f}")
@@ -170,6 +171,6 @@ def train_model(model, device, train_loader, val_loader, num_epochs=10):
             break
     
     # Load best model for return
-    checkpoint = torch.load('best_model.pth')
+    checkpoint = torch.load('best_model.pth', weights_only=True)
     model.load_state_dict(checkpoint['model_state_dict'])
     return model
