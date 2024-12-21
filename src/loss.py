@@ -1,5 +1,6 @@
 import torch
 
+
 class InfoNCELoss(torch.nn.Module):
     def __init__(self, temperature=0.07):
         super().__init__()

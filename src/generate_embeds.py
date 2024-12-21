@@ -4,11 +4,14 @@ import numpy as np
 import torch
 from tqdm import tqdm
 
-import config
+from src.config import ConfigManager
 from token_classifier import load_token_classifier, predict
 
 
-token_classifier, token_classifier_tokenizer = load_token_classifier(config.pretrained_token_classifier_path, config.device)
+token_classifier, token_classifier_tokenizer = load_token_classifier(
+    ConfigManager().get("path")["pretrained_token_classifier_path"],
+    ConfigManager().get("training")["device"]
+)
 
 
 def encode_queries(model, df: pd.DataFrame) -> np.ndarray:
@@ -25,16 +28,18 @@ def encode_queries(model, df: pd.DataFrame) -> np.ndarray:
     """
     model.eval()
     all_embeddings = []
-    for i in tqdm(range(0, len(df), config.batch_size)):
-        query_imgs = torch.stack([model.processor(Image.open(query_image_path)) for query_image_path in df['query_image'][i:i+config.batch_size]]).to(config.device)
+    batch_size = ConfigManager().get("training")["batch_size"]
+    device = ConfigManager().get("training")["device"]
+    for i in tqdm(range(0, len(df), batch_size)):
+        query_imgs = torch.stack([model.processor(Image.open(query_image_path)) for query_image_path in df['query_image'][i:i+batch_size]]).to(device)
         with torch.no_grad():
             query_imgs_embd = model.feature_extractor.encode_image(query_imgs)
-        for j, text in enumerate(df['query_text'][i:i+config.batch_size].to_list()):
+        for j, text in enumerate(df['query_text'][i:i+batch_size].to_list()):
             predictions = predict(
                 tokens=text,
                 model=token_classifier,
                 tokenizer=token_classifier_tokenizer,
-                device=config.device,
+                device=device,
                 max_length=128
             )
             neg = []
@@ -54,10 +59,10 @@ def encode_queries(model, df: pd.DataFrame) -> np.ndarray:
                 last_tag = label
             for obj in pos:
                 with torch.no_grad():
-                    query_imgs_embd[j] += model.feature_extractor.encode_text(model.tokenizer(obj).to(config.device))[0]
+                    query_imgs_embd[j] += model.feature_extractor.encode_text(model.tokenizer(obj).to(device))[0]
             for obj in neg:
                 with torch.no_grad():
-                    query_imgs_embd[j] -= model.feature_extractor.encode_text(model.tokenizer(obj).to(config.device))[0]
+                    query_imgs_embd[j] -= model.feature_extractor.encode_text(model.tokenizer(obj).to(device))[0]
         query_imgs_embd = torch.nn.functional.normalize(query_imgs_embd, dim=1, p=2)
         all_embeddings.append(query_imgs_embd.detach().cpu().numpy())
     return np.concatenate(all_embeddings)
@@ -76,8 +81,10 @@ def encode_database(model, df: pd.DataFrame) -> np.ndarray :
     """
     model.eval()
     all_embeddings = []
-    for i in tqdm(range(0, len(df), config.batch_size)):
-        target_imgs = torch.stack([model.processor(Image.open(target_image_path)) for target_image_path in df['target_image'][i:i+config.batch_size]]).to(config.device)
+    batch_size = ConfigManager().get("training")["batch_size"]
+    device = ConfigManager().get("training")["device"]
+    for i in tqdm(range(0, len(df), batch_size)):
+        target_imgs = torch.stack([model.processor(Image.open(target_image_path)) for target_image_path in df['target_image'][i:i+batch_size]]).to(device)
         with torch.no_grad():
             # target_imgs_embedding = model.encode_database_image(target_imgs)
             target_imgs_embedding = model.feature_extractor.encode_image(target_imgs)

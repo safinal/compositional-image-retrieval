@@ -5,7 +5,7 @@ import random
 from torchvision.transforms import v2
 import pandas as pd
 
-import config
+from src.config import ConfigManager
 
 
 class RetrievalDataset(torch.utils.data.Dataset):
@@ -39,13 +39,14 @@ class RetrievalDataset(torch.utils.data.Dataset):
         return query_img, query_text, target_img, self.annotations.iloc[idx]['query_text']
     
     def split_data(self, annotations):
+        split_ratio = ConfigManager().get("training")["split_ratio"]
         shuffled_df = annotations.sample(frac=1, random_state=42).reset_index(drop=True)
         if self.split == "test":
             return shuffled_df # sample test set
         if self.split == "train":
-            return shuffled_df.iloc[:int(config.split_ratio * len(shuffled_df))] # train set
+            return shuffled_df.iloc[:int(split_ratio * len(shuffled_df))] # train set
         if self.split == "validation":
-            return shuffled_df.iloc[int(config.split_ratio * len(shuffled_df)):] # validation set
+            return shuffled_df.iloc[int(split_ratio * len(shuffled_df)):] # validation set
         raise Exception("split is not valid")
 
     def load_queries(self):
@@ -120,7 +121,7 @@ class UniqueTargetImageBatchSampler(torch.utils.data.Sampler):
         return (total + self.batch_size - 1) // self.batch_size
 
 
-train_transform = v2.Compose([
+default_train_transform = v2.Compose([
     v2.RandomResizedCrop(224, scale=(0.8, 1.0)),
     v2.RandomHorizontalFlip(),
     v2.ColorJitter(brightness=0.2, contrast=0.2, saturation=0.2),
@@ -128,7 +129,7 @@ train_transform = v2.Compose([
     v2.ToDtype(torch.float32, scale=True),
     v2.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])
 ])
-test_transform = v2.Compose([
+default_test_transform = v2.Compose([
     v2.Resize(256),
     v2.CenterCrop(224),
     v2.ToImage(),
@@ -137,45 +138,51 @@ test_transform = v2.Compose([
 ])
 
 
-def create_train_validation_test_datasets_and_loaders(tokenizer, transform=None):
+def create_train_val_test_datasets_and_loaders(tokenizer, transform=None):
+    img_dir_path = ConfigManager().get("paths")["image_root_dir"]
+    annotations_file_path = ConfigManager().get("paths")["annotations_file_path"]
+    split_ratio = ConfigManager().get("training")["split_ratio"]
+    batch_size = ConfigManager().get("training")["batch_size"]
+    num_workers = ConfigManager().get("training")["num_workers"]
+
     train_dataset = RetrievalDataset(
-        img_dir_path=config.image_root_dir,
-        annotations_file_path=config.annotations_file_path,
+        img_dir_path=img_dir_path,
+        annotations_file_path=annotations_file_path,
         split='train',
-        transform=transform if transform is not None else train_transform,
+        transform=transform if transform is not None else default_train_transform,
         tokenizer=tokenizer
     )
     train_loader = torch.utils.data.DataLoader(
         train_dataset,
-        num_workers=config.num_workers,
-        batch_sampler=UniqueTargetImageBatchSampler(dataset=train_dataset, batch_size=config.batch_size)
+        num_workers=num_workers,
+        batch_sampler=UniqueTargetImageBatchSampler(dataset=train_dataset, batch_size=batch_size)
     )
     val_dataset, val_loader = None, None
-    if config.split_ratio < 1:
+    if split_ratio < 1:
         val_dataset = RetrievalDataset(
-            img_dir_path=config.image_root_dir,
-            annotations_file_path=config.annotations_file_path,
+            img_dir_path=img_dir_path,
+            annotations_file_path=annotations_file_path,
             split='validation',
-            transform=transform if transform is not None else test_transform,
+            transform=transform if transform is not None else default_test_transform,
             tokenizer=tokenizer
         )
         val_loader = torch.utils.data.DataLoader(
             val_dataset,
-            batch_size=config.batch_size,
+            batch_size=batch_size,
             shuffle=True,
-            num_workers=config.num_workers,
+            num_workers=num_workers,
         )
     test_dataset = RetrievalDataset(
-        img_dir_path=config.test_root_dir,
-        annotations_file_path=config.test_annotations_file_path,
+        img_dir_path=ConfigManager().get("path")["test_root_dir"],
+        annotations_file_path=ConfigManager().get("path")["test_annotations_file_path"],
         split='test',
-        transform=transform if transform is not None else test_transform,
+        transform=transform if transform is not None else default_test_transform,
         tokenizer=tokenizer
     )
     test_loader = torch.utils.data.DataLoader(
         test_dataset,
-        batch_size=config.batch_size,
+        batch_size=batch_size,
         shuffle=True,
-        num_workers=config.num_workers,
+        num_workers=num_workers,
     )
     return train_dataset, train_loader, val_dataset, val_loader, test_dataset, test_loader

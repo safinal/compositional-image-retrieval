@@ -12,7 +12,6 @@ class Model(torch.nn.Module):
         )
         self.set_param_trainable_mode(module=self.feature_extractor, status=False)
 
-
     def set_param_trainable_mode(self, module, status):
         for param in module.parameters():
             param.requires_grad = status

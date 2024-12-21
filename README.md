@@ -31,4 +31,4 @@ The figure below serves as an example of this task:
   - ❌ Pre-trained models that directly solve the task without modifications  
 
 - **✅ Allowed:**  
-  - ✔️ Pre-trained Vision-Language Models (e.g., CLIP), **provided they are fine-tuned specifically for this task**  
+  - ✔️ Pre-trained Vision-Language Models (e.g., CLIP), if fine-tuned for this task  

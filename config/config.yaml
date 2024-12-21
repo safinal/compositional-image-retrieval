@@ -1,0 +1,22 @@
+model:
+  name: "ViTamin-L-384"
+  pretrained_weights: "datacomp1b"
+
+training:
+  batch_size: 64
+  num_workers: 128
+  num_epochs: 5
+  learning_rate: 1e-4
+  weight_decay: 0.01
+  loss_temperature: 0.07
+  scheduler_t_0: 5
+  scheduler_t_mult: 2
+  split_ratio: 1.0
+  device: "cuda"
+  
+paths:
+  image_root_dir: "./dataset/images"
+  annotations_file_path: "./dataset/data.csv"
+  test_root_dir: "./sample_evaluation/images"
+  test_annotations_file_path: "./sample_evaluation/data.csv"
+  pretrained_token_classifier_path: "trained_distil_bert_base"

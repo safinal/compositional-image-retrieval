@@ -2,7 +2,7 @@ import torch
 from tqdm import tqdm
 import os
 
-import config
+from src.config import ConfigManager
 from evaluate import evaluate
 
 
@@ -56,12 +56,13 @@ def train_epoch(model, train_loader, criterion, optimizer, device):
 
 
 def train(model, train_loader, test_dataset, criterion, optimizer, scheduler):
+    num_epochs = ConfigManager().get("training")["num_epochs"]
     model.set_param_trainable_mode(model.feature_extractor.visual.head, True)
     best_test_acc = 100*evaluate(model, test_dataset)
     print(f"Zero-shot Test Accuracy: {best_test_acc}\n")
-    for epoch in range(config.num_epochs):
-        print(f"\nEpoch {epoch+1}/{config.num_epochs}")
-        train_epoch(model, train_loader, criterion, optimizer, config.device)
+    for epoch in range(num_epochs):
+        print(f"\nEpoch {epoch+1}/{num_epochs}")
+        train_epoch(model, train_loader, criterion, optimizer, ConfigManager().get("training")["device"])
         test_acc = 100*evaluate(model, test_dataset)
         print(f"Test Accuracy: {test_acc}")
         scheduler.step()
