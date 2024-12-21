@@ -15,10 +15,13 @@ def calculate_accuracy(predictions: np.ndarray, ground_truth: np.ndarray) -> flo
     return accuracy
 
 def evaluate(model, dataset):
-    query_embeddings = encode_queries(model, dataset.load_queries())
-    database_embeddings = encode_database(model, dataset.load_database())
+    query_df = dataset.load_queries()
+    database_df = dataset.load_database()
+    database_lst = database_df['target_image'].to_list()
+    ground_truth = np.array([database_lst.index(query_df.iloc[i]['target_image']) for i in range(len(query_df))])
+    query_embeddings = encode_queries(model, query_df)
+    database_embeddings = encode_database(model, database_df)
     similarities = cosine_similarity(query_embeddings, database_embeddings)
     predictions = np.argmax(similarities, axis=1)
-    ground_truth = np.arange(len(database_embeddings))
     accuracy = calculate_accuracy(predictions, ground_truth)
     return accuracy

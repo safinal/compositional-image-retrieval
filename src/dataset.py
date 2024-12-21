@@ -50,7 +50,7 @@ class RetrievalDataset(torch.utils.data.Dataset):
         raise Exception("split is not valid")
 
     def load_queries(self):
-        return self.annotations.drop(columns=["target_image"])
+        return self.annotations
     
     def load_database(self):
         return self.annotations[["target_image"]]
