@@ -23,6 +23,7 @@ train(
     model,
     train_loader,
     test_dataset,
+    val_dataset,
     criterion,
     optimizer,
     scheduler
