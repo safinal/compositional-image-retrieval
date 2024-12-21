@@ -1,12 +1,5 @@
-# 🎯 Compositional Retrieval Challenge
-
-## 📚 Table of Contents
-- [🔍 Overview](#overview)
-- [🎯 Challenge Objective](#challenge-objective)
-- [🚀 Our Approach](#our-approach)
-- [⚙️ Model Constraints](#model-constraints)
-
----
+# ⭐️ Compositional Retrieval Challenge
+*Contributors: [Ali Nafisi](https://safinal.github.io/), [Hossein Shakibania](https://scholar.google.com/citations?user=huveR90AAAAJ&hl=en&authuser=1)*
 
 ## 🔍 Overview
 This repository contains our solution for the Compositional Retrieval Challenge, part of the [Rayan International AI Contest](https://ai.rayan.global). The challenge aims to develop a system capable of retrieving the most relevant image from a database by understanding a combination of visual and textual inputs.
@@ -21,10 +14,9 @@ The task requires building a system that can:
 
 - **Identify and return** the single most relevant matching image from a provided database.
 
-Figure 1 serves as an example of this task.
+The figure below serves as an example of this task:
 <p class="row" float="left" align="middle">
 <img style="width: 80%; height: auto;" src="assets/task.png"/>
-<figcaption style="text-align: center; font-size: 14px; color: gray;">Figure 1: Example of query processing and result retrieval.</figcaption>
 </p>
 
 ## 🚀 Our Approach
