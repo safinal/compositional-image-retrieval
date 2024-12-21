@@ -1,10 +1,11 @@
 import torch
-import pandas as pd
 from PIL import Image
-import random
 from collections import defaultdict
+import random
+from torchvision.transforms import v2
+import pandas as pd
 
-from main import SPLIT_RATIO
+import config
 
 
 class RetrievalDataset(torch.utils.data.Dataset):
@@ -14,11 +15,9 @@ class RetrievalDataset(torch.utils.data.Dataset):
         self.tokenizer = tokenizer
         self.split = split
         self.annotations = self.split_data(
-            # self.data_health_check(
-                self.convert_image_names_to_path(
-                    pd.read_csv(annotations_file_path)
-                )
-            # )
+            self.convert_image_names_to_path(
+                pd.read_csv(annotations_file_path)
+            )
         )
     
     def __len__(self) -> int:
@@ -37,16 +36,16 @@ class RetrievalDataset(torch.utils.data.Dataset):
             target_img = self.transform(target_img)
         if self.tokenizer:
             query_text = self.tokenizer(query_text).squeeze(0)
-        return query_img, query_text, target_img
+        return query_img, query_text, target_img, self.annotations.iloc[idx]['query_text']
     
     def split_data(self, annotations):
         shuffled_df = annotations.sample(frac=1, random_state=42).reset_index(drop=True)
         if self.split == "test":
             return shuffled_df # sample test set
         if self.split == "train":
-            return shuffled_df.iloc[:int(SPLIT_RATIO * len(shuffled_df))] # train set
+            return shuffled_df.iloc[:int(config.split_ratio * len(shuffled_df))] # train set
         if self.split == "validation":
-            return shuffled_df.iloc[int(SPLIT_RATIO * len(shuffled_df)):] # validation set
+            return shuffled_df.iloc[int(config.split_ratio * len(shuffled_df)):] # validation set
         raise Exception("split is not valid")
 
     def load_queries(self):
@@ -59,24 +58,6 @@ class RetrievalDataset(torch.utils.data.Dataset):
         df["query_image"] = self.img_dir_path + "/" + df["query_image"]
         df["target_image"] = self.img_dir_path + "/" + df["target_image"]
         return df
-    
-    # def data_health_check(self, annotations):
-    #     img_files = os.listdir(self.img_dir_path)
-    #     broken_files = [img for img in img_files if self.is_truncated(os.path.join(self.img_dir_path, img))]
-    #     annotations = annotations[
-    #         ~annotations['target_image'].isin(broken_files) &
-    #         ~annotations['query_image'].isin(broken_files)
-    #     ]
-    #     return annotations
-    
-    # def is_truncated(self, image_path):
-    #     try:
-    #         with Image.open(image_path) as img:
-    #             img.verify()
-    #         return False
-    #     except (IOError, SyntaxError, Image.DecompressionBombError) as e:
-    #         return True
-
 
 
 class UniqueTargetImageBatchSampler(torch.utils.data.Sampler):
@@ -137,3 +118,64 @@ class UniqueTargetImageBatchSampler(torch.utils.data.Sampler):
         """
         total = len(self.dataset)
         return (total + self.batch_size - 1) // self.batch_size
+
+
+train_transform = v2.Compose([
+    v2.RandomResizedCrop(224, scale=(0.8, 1.0)),
+    v2.RandomHorizontalFlip(),
+    v2.ColorJitter(brightness=0.2, contrast=0.2, saturation=0.2),
+    v2.ToImage(),
+    v2.ToDtype(torch.float32, scale=True),
+    v2.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])
+])
+test_transform = v2.Compose([
+    v2.Resize(256),
+    v2.CenterCrop(224),
+    v2.ToImage(),
+    v2.ToDtype(torch.float32, scale=True),
+    v2.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])
+])
+
+
+def create_train_validation_test_datasets_and_loaders(tokenizer, transform=None):
+    train_dataset = RetrievalDataset(
+        img_dir_path=config.image_root_dir,
+        annotations_file_path=config.annotations_file_path,
+        split='train',
+        transform=transform if transform is not None else train_transform,
+        tokenizer=tokenizer
+    )
+    train_loader = torch.utils.data.DataLoader(
+        train_dataset,
+        num_workers=config.num_workers,
+        batch_sampler=UniqueTargetImageBatchSampler(dataset=train_dataset, batch_size=config.batch_size)
+    )
+    val_dataset, val_loader = None, None
+    if config.split_ratio < 1:
+        val_dataset = RetrievalDataset(
+            img_dir_path=config.image_root_dir,
+            annotations_file_path=config.annotations_file_path,
+            split='validation',
+            transform=transform if transform is not None else test_transform,
+            tokenizer=tokenizer
+        )
+        val_loader = torch.utils.data.DataLoader(
+            val_dataset,
+            batch_size=config.batch_size,
+            shuffle=True,
+            num_workers=config.num_workers,
+        )
+    test_dataset = RetrievalDataset(
+        img_dir_path=config.test_root_dir,
+        annotations_file_path=config.test_annotations_file_path,
+        split='test',
+        transform=transform if transform is not None else test_transform,
+        tokenizer=tokenizer
+    )
+    test_loader = torch.utils.data.DataLoader(
+        test_dataset,
+        batch_size=config.batch_size,
+        shuffle=True,
+        num_workers=config.num_workers,
+    )
+    return train_dataset, train_loader, val_dataset, val_loader, test_dataset, test_loader

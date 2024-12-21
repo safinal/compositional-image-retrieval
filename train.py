@@ -1,5 +1,9 @@
 import torch
 from tqdm import tqdm
+import os
+
+import config
+from evaluate import evaluate
 
 
 def train_epoch(model, train_loader, criterion, optimizer, device):
@@ -7,7 +11,7 @@ def train_epoch(model, train_loader, criterion, optimizer, device):
     total_loss = 0
     
     with tqdm(train_loader, desc="Training") as pbar:
-        for batch_idx, (query_imgs, query_texts, target_imgs) in enumerate(pbar):
+        for batch_idx, (query_imgs, query_texts, target_imgs, qt) in enumerate(pbar):
             optimizer.zero_grad()
             
             # Move data to device
@@ -16,8 +20,16 @@ def train_epoch(model, train_loader, criterion, optimizer, device):
             query_texts = query_texts.to(device)
             
             # Forward pass
-            query_embeds = model(query_imgs, query_texts)
-            database_embeds = model.encode_database_image(target_imgs)
+            query_embeds = model.feature_extractor.encode_image(query_imgs)
+            for j, text in enumerate(qt):
+                words = text.split()
+                assert words[0] == 'add' and words[2] == 'and' and words[3] == 'remove' and len(words) == 5
+                positive_object = words[1]
+                negative_object = words[4]
+                with torch.no_grad():
+                    query_embeds[j] += model.feature_extractor.encode_text(model.tokenizer(f"a photo of a {positive_object}.").to(device))[0]
+                    query_embeds[j] -= model.feature_extractor.encode_text(model.tokenizer(f"a photo of a {negative_object}.").to(device))[0]
+            database_embeds = model.feature_extractor.encode_image(target_imgs)
             
             # Calculate loss
             loss = criterion(query_embeds, database_embeds)
@@ -40,65 +52,20 @@ def train_epoch(model, train_loader, criterion, optimizer, device):
     
     return total_loss / len(train_loader)
 
-def validate(model, loader, criterion, device):
-    model.eval()
-    total_loss = 0
-    correct = 0
-    total = 0
-    
-    with torch.no_grad():
-        for query_imgs, query_texts, target_imgs in tqdm(loader, desc="Validation"):
-            # Move data to device
-            query_imgs = query_imgs.to(device)
-            target_imgs = target_imgs.to(device)
-            
-            # Forward pass
-            query_embeds = model(query_imgs, query_texts)
-            database_embeds = model.encode_database_image(target_imgs)
-            
-            # Calculate loss
-            loss = criterion(query_embeds, database_embeds)
-            total_loss += loss.item()
-            
-            # Calculate accuracy
-            similarity = torch.matmul(query_embeds, database_embeds.T)
-            predictions = similarity.argmax(dim=1)
-            labels = torch.arange(len(predictions)).to(device)
-            correct += (predictions == labels).sum().item()
-            total += len(predictions)
-    
-    return total_loss / len(loader), correct / total
 
-class InfoNCELoss(torch.nn.Module):
-    def __init__(self, temperature=0.07):
-        super().__init__()
-        self.temperature = temperature
-        self.criterion = torch.nn.CrossEntropyLoss()
 
-    def forward(self, query_embeds, database_embeds):
-        """
-        InfoNCE loss implementation
-        
-        Args:
-            query_embeds: Query embeddings [batch_size, embed_dim]
-            database_embeds: Database embeddings [batch_size, embed_dim]
-            
-        Returns:
-            loss: InfoNCE loss value
-        """
-        # Normalize embeddings
-        query_embeds = torch.nn.functional.normalize(query_embeds, dim=1)
-        database_embeds = torch.nn.functional.normalize(database_embeds, dim=1)
-        
-        # Calculate similarity matrix
-        similarity_matrix = torch.matmul(query_embeds, database_embeds.T) / self.temperature
-        
-        # Labels are the diagonal elements (positive pairs)
-        labels = torch.arange(len(query_embeds)).to(query_embeds.device)
-        
-        # Calculate loss in both directions (query->database and database->query)
-        loss_q2d = self.criterion(similarity_matrix, labels)
-        loss_d2q = self.criterion(similarity_matrix.T, labels)
-        
-        # Total loss is the average of both directions
-        return (loss_q2d + loss_d2q) / 2
+
+def train(model, train_loader, test_dataset, criterion, optimizer, scheduler):
+    model.set_param_trainable_mode(model.feature_extractor.visual.head, True)
+    best_test_acc = 100*evaluate(model, test_dataset)
+    print(f"Zero-shot Test Accuracy: {best_test_acc}\n")
+    for epoch in range(config.num_epochs):
+        print(f"\nEpoch {epoch+1}/{config.num_epochs}")
+        train_epoch(model, train_loader, criterion, optimizer, config.device)
+        test_acc = 100*evaluate(model, test_dataset)
+        print(f"Test Accuracy: {test_acc}")
+        scheduler.step()
+        model.save(os.path.join(os.getcwd(), f"weights_epoch_{epoch + 1}.pth"))
+        if test_acc > best_test_acc:
+            model.save(os.path.join(os.getcwd(), f"best_model_epoch_{epoch + 1}.pth"))
+            best_test_acc = test_acc

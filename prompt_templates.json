@@ -1,0 +1,2546 @@
+[
+    {
+        "template":"Could you please enrich the scene by adding a <positive_object>?",
+        "model":"Gemini 1.5 Pro"
+    },
+    {
+        "template":"I’d love to see a <positive_object> appear in this image.",
+        "model":"Gemini 1.5 Pro"
+    },
+    {
+        "template":"Make this image more interesting by incorporating a <positive_object>.",
+        "model":"Gemini 1.5 Pro"
+    },
+    {
+        "template":"Please introduce a <positive_object> into the existing visual narrative.",
+        "model":"Gemini 1.5 Pro"
+    },
+    {
+        "template":"The picture needs a <positive_object>; please add one.",
+        "model":"Gemini 1.5 Pro"
+    },
+    {
+        "template":"Let’s augment this image with the presence of a <positive_object>.",
+        "model":"Gemini 1.5 Pro"
+    },
+    {
+        "template":"Transform this image by adding a <positive_object> to it.",
+        "model":"Gemini 1.5 Pro"
+    },
+    {
+        "template":"Give this picture a new element: a <positive_object>.",
+        "model":"Gemini 1.5 Pro"
+    },
+    {
+        "template":"It would be great if you could insert a <positive_object> into the scene.",
+        "model":"Gemini 1.5 Pro"
+    },
+    {
+        "template":"Enhance the visual appeal by adding a <positive_object>.",
+        "model":"Gemini 1.5 Pro"
+    },
+    {
+        "template":"This picture would be better with a <positive_object> and a <positive_object>.",
+        "model":"Gemini 1.5 Pro"
+    },
+    {
+        "template":"How about adding two elements to this: a <positive_object> and also a <positive_object>?",
+        "model":"Gemini 1.5 Pro"
+    },
+    {
+        "template":"I’d like this image to feature both a <positive_object> and a <positive_object>.",
+        "model":"Gemini 1.5 Pro"
+    },
+    {
+        "template":"Let’s see this picture with an added <positive_object> and another <positive_object>.",
+        "model":"Gemini 1.5 Pro"
+    },
+    {
+        "template":"Populate this image further with both a <positive_object> and a <positive_object>.",
+        "model":"Gemini 1.5 Pro"
+    },
+    {
+        "template":"Give this picture more life with a <positive_object> and, in addition, a <positive_object>.",
+        "model":"Gemini 1.5 Pro"
+    },
+    {
+        "template":"This setting needs two things: a <positive_object> and, importantly, a <positive_object>.",
+        "model":"Gemini 1.5 Pro"
+    },
+    {
+        "template":"To make this picture complete, add a <positive_object> and also include a <positive_object>.",
+        "model":"Gemini 1.5 Pro"
+    },
+    {
+        "template":"Incorporate a <positive_object> into this shot, and don’t forget a <positive_object>.",
+        "model":"Gemini 1.5 Pro"
+    },
+    {
+        "template":"Let’s amplify this scene by introducing a <positive_object> and a secondary element, a <positive_object>.",
+        "model":"Gemini 1.5 Pro"
+    },
+    {
+        "template":"Imagine a <positive_object>, a <positive_object>, and a <positive_object> all in this image together.",
+        "model":"Gemini 1.5 Pro"
+    },
+    {
+        "template":"I wish to see this image populated with a <positive_object>, a <positive_object>, and even a <positive_object>.",
+        "model":"Gemini 1.5 Pro"
+    },
+    {
+        "template":"Let’s enrich this visual by adding three key items: a <positive_object>, then a <positive_object>, and finally, a <positive_object>.",
+        "model":"Gemini 1.5 Pro"
+    },
+    {
+        "template":"Make this image more complex by including a <positive_object>, next a <positive_object>, and lastly, a <positive_object>.",
+        "model":"Gemini 1.5 Pro"
+    },
+    {
+        "template":"This scene is begging for a trio of additions: a <positive_object>, followed by a <positive_object>, and finished with a <positive_object>.",
+        "model":"Gemini 1.5 Pro"
+    },
+    {
+        "template":"Could you please refine this image by removing the <negative_object>?",
+        "model":"Gemini 1.5 Pro"
+    },
+    {
+        "template":"I’d like to see this image without the <negative_object>.",
+        "model":"Gemini 1.5 Pro"
+    },
+    {
+        "template":"Improve this image by eliminating the <negative_object>.",
+        "model":"Gemini 1.5 Pro"
+    },
+    {
+        "template":"Please subtract the <negative_object> from the visual composition.",
+        "model":"Gemini 1.5 Pro"
+    },
+    {
+        "template":"The picture would be cleaner without the <negative_object>; please remove it.",
+        "model":"Gemini 1.5 Pro"
+    },
+    {
+        "template":"Let’s declutter this image by erasing the <negative_object>.",
+        "model":"Gemini 1.5 Pro"
+    },
+    {
+        "template":"Simplify this image by taking out the <negative_object>.",
+        "model":"Gemini 1.5 Pro"
+    },
+    {
+        "template":"Give this picture a cleaner look by deleting the <negative_object>.",
+        "model":"Gemini 1.5 Pro"
+    },
+    {
+        "template":"It would be great if you could exclude the <negative_object> from the scene.",
+        "model":"Gemini 1.5 Pro"
+    },
+    {
+        "template":"Enhance the visual clarity by removing the <negative_object>.",
+        "model":"Gemini 1.5 Pro"
+    },
+    {
+        "template":"This picture is too busy; remove both the <negative_object> and the <negative_object>.",
+        "model":"Gemini 1.5 Pro"
+    },
+    {
+        "template":"How about cleaning up this image by taking away the <negative_object> and, separately, the <negative_object>?",
+        "model":"Gemini 1.5 Pro"
+    },
+    {
+        "template":"I’d like this image to be free of both the <negative_object> and the <negative_object>.",
+        "model":"Gemini 1.5 Pro"
+    },
+    {
+        "template":"Let’s see this picture without the <negative_object> and also minus the <negative_object>.",
+        "model":"Gemini 1.5 Pro"
+    },
+    {
+        "template":"Depopulate this image by removing both the <negative_object> and the <negative_object>.",
+        "model":"Gemini 1.5 Pro"
+    },
+    {
+        "template":"Give this picture a more minimalist feel by taking out the <negative_object> and, in addition, the <negative_object>.",
+        "model":"Gemini 1.5 Pro"
+    },
+    {
+        "template":"This setting is too crowded; get rid of the <negative_object> and, importantly, also the <negative_object>.",
+        "model":"Gemini 1.5 Pro"
+    },
+    {
+        "template":"To make this picture more focused, remove the <negative_object> and also exclude the <negative_object>.",
+        "model":"Gemini 1.5 Pro"
+    },
+    {
+        "template":"Subtract the <negative_object> from this shot, and don’t forget to remove the <negative_object>.",
+        "model":"Gemini 1.5 Pro"
+    },
+    {
+        "template":"Let’s refine this scene by taking out the <negative_object> and a secondary element, the <negative_object>.",
+        "model":"Gemini 1.5 Pro"
+    },
+    {
+        "template":"Imagine this image without the <negative_object>, the <negative_object>, and the <negative_object>.",
+        "model":"Gemini 1.5 Pro"
+    },
+    {
+        "template":"I wish to see this image cleaned up by removing the <negative_object>, then the <negative_object>, and even the <negative_object>.",
+        "model":"Gemini 1.5 Pro"
+    },
+    {
+        "template":"Let’s purify this visual by subtracting three distracting items: first the <negative_object>, then the <negative_object>, and finally, the <negative_object>.",
+        "model":"Gemini 1.5 Pro"
+    },
+    {
+        "template":"Make this image less cluttered by excluding the <negative_object>, next the <negative_object>, and lastly, the <negative_object>.",
+        "model":"Gemini 1.5 Pro"
+    },
+    {
+        "template":"This scene needs to be significantly simplified: remove the <negative_object>, followed by the <negative_object>, and finished with the <negative_object>.",
+        "model":"Gemini 1.5 Pro"
+    },
+    {
+        "template":"Replace the <negative_object> with a <positive_object>.",
+        "model":"Gemini 1.5 Pro"
+    },
+    {
+        "template":"Can you swap the <negative_object> for a <positive_object>?",
+        "model":"Gemini 1.5 Pro"
+    },
+    {
+        "template":"Omit the <negative_object> and instead, insert a <positive_object>.",
+        "model":"Gemini 1.5 Pro"
+    },
+    {
+        "template":"After removing the <negative_object>, please add a <positive_object> in its stead.",
+        "model":"Gemini 1.5 Pro"
+    },
+    {
+        "template":"First, take out the <negative_object>; then, visualize a <positive_object> there.",
+        "model":"Gemini 1.5 Pro"
+    },
+    {
+        "template":"Let’s exchange the <negative_object> in this picture for a <positive_object>.",
+        "model":"Gemini 1.5 Pro"
+    },
+    {
+        "template":"Get rid of the <negative_object> and in its place, bring in a <positive_object>.",
+        "model":"Gemini 1.5 Pro"
+    },
+    {
+        "template":"The <negative_object> is distracting; remove it and add a <positive_object> to balance the image.",
+        "model":"Gemini 1.5 Pro"
+    },
+    {
+        "template":"Clear the space occupied by the <negative_object> and fill it with a <positive_object>.",
+        "model":"Gemini 1.5 Pro"
+    },
+    {
+        "template":"Erase the <negative_object> from the scene and then populate it with a <positive_object>.",
+        "model":"Gemini 1.5 Pro"
+    },
+    {
+        "template":"Remove the <negative_object> and <negative_object>, then introduce a <positive_object>.",
+        "model":"Gemini 1.5 Pro"
+    },
+    {
+        "template":"Get rid of <negative_object> and <negative_object>, and then add in their place a <positive_object>.",
+        "model":"Gemini 1.5 Pro"
+    },
+    {
+        "template":"I’d like the <negative_object> and <negative_object> gone, and a <positive_object> added instead.",
+        "model":"Gemini 1.5 Pro"
+    },
+    {
+        "template":"Take away both the <negative_object> and the <negative_object>; afterwards, add a <positive_object>.",
+        "model":"Gemini 1.5 Pro"
+    },
+    {
+        "template":"First, eliminate <negative_object> and <negative_object>, then introduce a <positive_object> to the scene.",
+        "model":"Gemini 1.5 Pro"
+    },
+    {
+        "template":"Clear out the <negative_object> and the <negative_object>, and then bring in a <positive_object> to fill the space.",
+        "model":"Gemini 1.5 Pro"
+    },
+    {
+        "template":"Depopulate the image of the <negative_object> and the <negative_object>, then add a <positive_object> for visual interest.",
+        "model":"Gemini 1.5 Pro"
+    },
+    {
+        "template":"Make the <negative_object> and the <negative_object> disappear and replace them with a single <positive_object>.",
+        "model":"Gemini 1.5 Pro"
+    },
+    {
+        "template":"Instead of the <negative_object> and <negative_object>, let’s have a <positive_object>.",
+        "model":"Gemini 1.5 Pro"
+    },
+    {
+        "template":"Subtract the <negative_object> and the <negative_object> and add a <positive_object> to compensate.",
+        "model":"Gemini 1.5 Pro"
+    },
+    {
+        "template":"Remove the <negative_object>, but then add both a <positive_object> and a <positive_object>.",
+        "model":"Gemini 1.5 Pro"
+    },
+    {
+        "template":"Can you introduce a <positive_object> in the foreground while removing the <negative_object>?",
+        "model":"Gemini 1.5 Pro"
+    },
+    {
+        "template":"Would you please paint a <positive_object> into the upper right corner, and take away the <negative_object>?",
+        "model":"Gemini 1.5 Pro"
+    },
+    {
+        "template":"Let’s see a <positive_object> sneak into the bottom left, replacing the <negative_object>.",
+        "model":"Gemini 1.5 Pro"
+    },
+    {
+        "template":"Sketch a <positive_object> lightly in the background while completely removing the <negative_object>.",
+        "model":"Gemini 1.5 Pro"
+    },
+    {
+        "template":"Depict a <positive_object> as if it was always there, and simultaneously the <negative_object> never existed.",
+        "model":"Gemini 1.5 Pro"
+    },
+    {
+        "template":"Project a <positive_object> into the scene, casting the <negative_object> into oblivion.",
+        "model":"Gemini 1.5 Pro"
+    },
+    {
+        "template":"Make the <negative_object> dissolve like smoke and then put a <positive_object> in its place. 22",
+        "model":"Gemini 1.5 Pro"
+    },
+    {
+        "template":"Can you have the <negative_object> teleport away, leaving a <positive_object> behind?",
+        "model":"Gemini 1.5 Pro"
+    },
+    {
+        "template":"Cause the <negative_object> to fade into transparency, and then make a <positive_object> solidify.",
+        "model":"Gemini 1.5 Pro"
+    },
+    {
+        "template":"Let the <negative_object> crumble away, and a <positive_object> blossom in its stead.",
+        "model":"Gemini 1.5 Pro"
+    },
+    {
+        "template":"Have the <negative_object> shrink into nothingness, opening space for a <positive_object>.",
+        "model":"Gemini 1.5 Pro"
+    },
+    {
+        "template":"Watch the <negative_object> retract into the shadows as a <positive_object> emerges into the light.",
+        "model":"Gemini 1.5 Pro"
+    },
+    {
+        "template":"Imagine the <negative_object> being whisked away by a breeze, replaced by a stationary <positive_object>.",
+        "model":"Gemini 1.5 Pro"
+    },
+    {
+        "template":"Let the <negative_object> melt away like ice, and a <positive_object> crystallize from the void.",
+        "model":"Gemini 1.5 Pro"
+    },
+    {
+        "template":"Cause the <negative_object> to splinter and scatter, allowing a <positive_object> to coalesce.",
+        "model":"Gemini 1.5 Pro"
+    },
+    {
+        "template":"Have the <negative_object> simply cease to exist, as a <positive_object> flickers into being.",
+        "model":"Gemini 1.5 Pro"
+    },
+    {
+        "template":"Witness the <negative_object> vanish as if it were a glitch, and a <positive_object> load into the scene.",
+        "model":"Gemini 1.5 Pro"
+    },
+    {
+        "template":"Let the <negative_object> dematerialize like a hologram, making way for a substantial <positive_object>.",
+        "model":"Gemini 1.5 Pro"
+    },
+    {
+        "template":"Have the <negative_object> implode silently, and a <positive_object> pop up in the silence.",
+        "model":"Gemini 1.5 Pro"
+    },
+    {
+        "template":"Watch the <negative_object> evaporate under a heat shimmer, as a <positive_object> forms in the cool.",
+        "model":"Gemini 1.5 Pro"
+    },
+    {
+        "template":"Allow the <negative_object> to be consumed by a shadow, then brighten the area with a <positive_object>.",
+        "model":"Gemini 1.5 Pro"
+    },
+    {
+        "template":"Imagine the <negative_object> being peeled away like a sticker, revealing a <positive_object> underneath.",
+        "model":"Gemini 1.5 Pro"
+    },
+    {
+        "template":"See the <negative_object> blur out of focus and completely disappear, then a crisp <positive_object> appears.",
+        "model":"Gemini 1.5 Pro"
+    },
+    {
+        "template":"Have the <negative_object> retreat into the background, replaced by a bold <positive_object> in the foreground.",
+        "model":"Gemini 1.5 Pro"
+    },
+    {
+        "template":"Let the <negative_object> unravel like a thread, and a <positive_object> be spun into existence.",
+        "model":"Gemini 1.5 Pro"
+    },
+    {
+        "template":"Incorporate <positive_object> and <positive_object>, while excising <negative_object>.",
+        "model":"Gemini 1.5 Pro"
+    },
+    {
+        "template":"First, introduce <positive_object>, then <positive_object>, and finally, dismiss <negative_object>.",
+        "model":"Gemini 1.5 Pro"
+    },
+    {
+        "template":"Banish <negative_object>, but not before adding <positive_object> and then <positive_object>.",
+        "model":"Gemini 1.5 Pro"
+    },
+    {
+        "template":"Remove <negative_object> and <negative_object>, making room for <positive_object>.",
+        "model":"Gemini 1.5 Pro"
+    },
+    {
+        "template":"Could you erase <negative_object> and <negative_object>, then draw in <positive_object> and <positive_object>?",
+        "model":"Gemini 1.5 Pro"
+    },
+    {
+        "template":"Get rid of <negative_object> and <negative_object>, and replace them with <positive_object> and <positive_object> together.",
+        "model":"Gemini 1.5 Pro"
+    },
+    {
+        "template":"Subtract <negative_object> and <negative_object> from the picture, adding <positive_object> and <positive_object> in different spots.",
+        "model":"Gemini 1.5 Pro"
+    },
+    {
+        "template":"Wipe away <negative_object> and <negative_object>, and then paint in <positive_object> next to <positive_object>.",
+        "model":"Gemini 1.5 Pro"
+    },
+    {
+        "template":"Filter out <negative_object> and <negative_object> but include <positive_object> above <positive_object>.",
+        "model":"Gemini 1.5 Pro"
+    },
+    {
+        "template":"Exclude <negative_object> and <negative_object>, but feature <positive_object> overlapping <positive_object>.",
+        "model":"Gemini 1.5 Pro"
+    },
+    {
+        "template":"Could we omit <negative_object>, but have <positive_object> and <positive_object> reflected in the scene?",
+        "model":"Gemini 1.5 Pro"
+    },
+    {
+        "template":"Let’s delete <negative_object>, then manifest <positive_object> as a shadow and <positive_object> in full view.",
+        "model":"Gemini 1.5 Pro"
+    },
+    {
+        "template":"Swap out <negative_object> for <positive_object> subtly in the distance, and <positive_object> prominently upfront.",
+        "model":"Gemini 1.5 Pro"
+    },
+    {
+        "template":"After the removal of <negative_object>, place <positive_object> in a sequence with <positive_object>.",
+        "model":"Gemini 1.5 Pro"
+    },
+    {
+        "template":"If we take out <negative_object>, can we add <positive_object> at an angle to <positive_object>?",
+        "model":"Gemini 1.5 Pro"
+    },
+    {
+        "template":"Clear the <negative_object> from the area and fill it with both <positive_object> and <positive_object>, miniaturized.",
+        "model":"Gemini 1.5 Pro"
+    },
+    {
+        "template":"With <negative_object> gone, introduce a glowing <positive_object> and a muted <positive_object>.",
+        "model":"Gemini 1.5 Pro"
+    },
+    {
+        "template":"Dispose of <negative_object>, then position <positive_object> as if it’s interacting with <positive_object>.",
+        "model":"Gemini 1.5 Pro"
+    },
+    {
+        "template":"If we omit <negative_object>, could you show <positive_object> transforming into <positive_object>?",
+        "model":"Gemini 1.5 Pro"
+    },
+    {
+        "template":"Following the expulsion of <negative_object>, layer <positive_object> beneath <positive_object>.",
+        "model":"Gemini 1.5 Pro"
+    },
+    {
+        "template":"As if by magic, let the <negative_object> turn into a <positive_object>.",
+        "model":"Gemini 1.5 Pro"
+    },
+    {
+        "template":"Add <positive_object> to the scene while removing <negative_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Remove <negative_object> immediately, then proceed to add <positive_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Introduce <positive_object>, and follow that up by removing <negative_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Remove <negative_object> first, then add <positive_object> to the image.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Include <positive_object>, but ensure <negative_object> is removed shortly after.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Begin by eliminating <negative_object>, and then place <positive_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Add <positive_object>, then proceed by discarding <negative_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Take out <negative_object>, then add <positive_object> to the frame.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Place <positive_object> into the picture while taking out <negative_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"First, remove <negative_object>, then add <positive_object> to the scene.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Add <positive_object>, then ensure <negative_object> is taken away.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Remove <negative_object> entirely, and add <positive_object> in its place.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Eliminate <negative_object>, and add <positive_object> alongside <positive_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Place <positive_object> and <positive_object>, then remove <negative_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Insert <positive_object>, <positive_object>, and <positive_object>, then eliminate <negative_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Take away <negative_object>, <negative_object>, and add <positive_object> to the background.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Include <positive_object>, remove <negative_object>, and then add <positive_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Remove <negative_object>, then add <positive_object>, and later <positive_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Insert <positive_object>, then follow up by discarding <negative_object> and <negative_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Add <positive_object>, while making sure <negative_object> and <negative_object> are gone.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Bring in <positive_object>, <positive_object>, and <positive_object>, and remove <negative_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Take out <negative_object>, then proceed by adding <positive_object> and <positive_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Add <positive_object>, but first, eliminate <negative_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Start by discarding <negative_object>, then move to adding <positive_object> and <positive_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"First, introduce <positive_object>, then remove <negative_object> and <negative_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Eliminate <negative_object>, insert <positive_object>, and include <positive_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Add <positive_object>, get rid of <negative_object>, and follow up by adding <positive_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Place <positive_object>, remove <negative_object>, and introduce <positive_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Remove <negative_object> and include <positive_object>, then discard <negative_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Add <positive_object>, remove <negative_object>, and add <positive_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Bring <positive_object> and <positive_object>, and get rid of <negative_object> from the image.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Start by placing <positive_object>, then remove <negative_object> and <negative_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Eliminate <negative_object> first, then introduce <positive_object> and <positive_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Insert <positive_object>, followed by the removal of <negative_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Add <positive_object>, and simultaneously eliminate <negative_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Take out <negative_object>, then place <positive_object> into the frame.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Begin by adding <positive_object>, then get rid of <negative_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Place <positive_object> first, then proceed to discard <negative_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Eliminate <negative_object> and <negative_object>, and add <positive_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Discard <negative_object>, include <positive_object>, and then introduce <positive_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Insert <positive_object>, then remove <negative_object>, and later add <positive_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Add <positive_object>, discard <negative_object>, and add <positive_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Remove <negative_object>, then add <positive_object> and <positive_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Insert <positive_object> and <positive_object>, while removing <negative_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Add <positive_object>, get rid of <negative_object>, and include <positive_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Take out <negative_object>, and bring in <positive_object> alongside <positive_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Remove <negative_object>, add <positive_object>, and eliminate <negative_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Insert <positive_object>, discard <negative_object>, and place <positive_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Remove <negative_object>, add <positive_object>, and then <positive_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Bring <positive_object>, <positive_object>, and remove <negative_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Introduce <positive_object>, remove <negative_object>, and add <positive_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Start by adding <positive_object>, then follow up by eliminating <negative_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Include <positive_object> and <positive_object>, and get rid of <negative_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Discard <negative_object>, and include <positive_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Bring <positive_object> and <positive_object>, then discard <negative_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Place <positive_object>, remove <negative_object>, and add <positive_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Remove <negative_object> and <negative_object>, then add <positive_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Insert <positive_object>, discard <negative_object>, and add <positive_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Take away <negative_object>, and bring <positive_object> into view.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Add <positive_object> and eliminate <negative_object> completely.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Begin by discarding <negative_object>, then place <positive_object> into the scene.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Eliminate <negative_object> and bring in <positive_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Add <positive_object> to the picture and get rid of <negative_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Include <positive_object> and <positive_object>, then remove <negative_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Remove <negative_object>, <negative_object>, and add <positive_object> and <positive_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Insert <positive_object>, then discard <negative_object> and <negative_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Place <positive_object>, then eliminate <negative_object> and <negative_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Add <positive_object>, remove <negative_object>, and discard <negative_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Insert <positive_object>, eliminate <negative_object>, and bring <positive_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Remove <negative_object>, and afterward, add <positive_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Discard <negative_object>, and add <positive_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Take out <negative_object>, insert <positive_object>, and then <positive_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Introduce <positive_object>, then remove <negative_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Add <positive_object>, discard <negative_object>, and later include <positive_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Remove <negative_object>, add <positive_object>, and include <positive_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Bring <positive_object> and remove <negative_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Include <positive_object>, then take out <negative_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Add <positive_object> and eliminate <negative_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Insert <positive_object>, remove <negative_object>, and follow up by adding <positive_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Get rid of <negative_object>, add <positive_object>, and include <positive_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Place <positive_object>, and remove <negative_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Eliminate <negative_object>, insert <positive_object>, and bring <positive_object> into view.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Discard <negative_object>, and bring in <positive_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Add <positive_object>, and remove <negative_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Place <positive_object> and take out <negative_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Remove <negative_object> and insert <positive_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Bring <positive_object>, then discard <negative_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Insert <positive_object>, remove <negative_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Get rid of <negative_object>, place <positive_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Add <positive_object> and take away <negative_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Remove <negative_object>, introduce <positive_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Place <positive_object>, remove <negative_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Eliminate <negative_object>, then add <positive_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Insert <positive_object>, and get rid of <negative_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Take away <negative_object>, and place <positive_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Add <positive_object>, then remove <negative_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Remove <negative_object> and include <positive_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Include <positive_object> and discard <negative_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Add <positive_object> first, then remove <negative_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Insert <positive_object>, eliminate <negative_object>, and add <positive_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Introduce <positive_object> to the image and eliminate <negative_object> entirely.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Remove <negative_object>, then gracefully add <positive_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Take <negative_object> out of the scene and bring <positive_object> into the frame.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Put <positive_object> into the setting while removing <negative_object> from view.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Eliminate <negative_object> and later enhance the picture with <positive_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Insert <positive_object> into the background, and subsequently exclude <negative_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Discard <negative_object>, and follow up by placing <positive_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Add <positive_object>, while clearing out <negative_object> from the scene.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Clear <negative_object> first, then seamlessly add <positive_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Set aside <negative_object> and instead place <positive_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Add <positive_object> and <positive_object> to the view, and subtract <negative_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Replace <negative_object> by introducing both <positive_object> and <positive_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Bring in <positive_object> along with <positive_object>, and eliminate <negative_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Introduce <positive_object> and <positive_object>, while discarding <negative_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Add <positive_object> and <positive_object>, but first remove <negative_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Take out <negative_object>, and in its place, include <positive_object> and <positive_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Place <positive_object> and <positive_object> into the scene, while removing <negative_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"First, discard <negative_object>, then bring <positive_object> and <positive_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Remove <negative_object>, and add two new elements: <positive_object> and <positive_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Add both <positive_object> and <positive_object>, but eliminate <negative_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Include <positive_object> while eliminating both <negative_object> and <negative_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Remove <negative_object> and <negative_object>, and introduce <positive_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Eliminate <negative_object> and <negative_object>, followed by placing <positive_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Take out <negative_object> and <negative_object>, and add <positive_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Add <positive_object>, and in the process, remove <negative_object> and <negative_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Start by discarding <negative_object> and <negative_object>, then bring in <positive_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Eliminate <negative_object> as well as <negative_object>, then smoothly include <positive_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Get rid of <negative_object> and <negative_object>, while enhancing the view with <positive_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Take away <negative_object> along with <negative_object>, and then insert <positive_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Remove two objects: <negative_object> and <negative_object>, and replace them with <positive_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Add <positive_object>, <positive_object>, and <positive_object>, and remove <negative_object>, <negative_object>, and <negative_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Replace <negative_object>, <negative_object>, and <negative_object> with <positive_object>, <positive_object>, and <positive_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Eliminate three items: <negative_object>, <negative_object>, and <negative_object>, and bring <positive_object>, <positive_object>, and <positive_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Remove <negative_object>, <negative_object>, <negative_object>, and fill the space with <positive_object>, <positive_object>, and <positive_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Introduce three new elements: <positive_object>, <positive_object>, and <positive_object>, and remove <negative_object>, <negative_object>, and <negative_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Add <positive_object>, <positive_object>, <positive_object>, while eliminating <negative_object>, <negative_object>, <negative_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Take away <negative_object>, <negative_object>, <negative_object>, and in their place, add <positive_object>, <positive_object>, <positive_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Subtract <negative_object>, <negative_object>, <negative_object>, and incorporate <positive_object>, <positive_object>, <positive_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"First remove <negative_object>, <negative_object>, <negative_object>, and then include <positive_object>, <positive_object>, <positive_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Clear <negative_object>, <negative_object>, <negative_object>, and enrich the scene with <positive_object>, <positive_object>, <positive_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Introduce <positive_object> and remove <negative_object> from the story.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Bring <positive_object> into focus and fade out <negative_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Make room for <positive_object> by getting rid of <negative_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Erase <negative_object>, and instead highlight <positive_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Push <negative_object> out of the way to give space for <positive_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Replace <negative_object> entirely with <positive_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Add <positive_object> into the frame while phasing out <negative_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Switch out <negative_object> and bring in <positive_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Add <positive_object>, then subtract <negative_object> quietly.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Remove <negative_object>, then focus on placing <positive_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Get <positive_object> on board while eliminating <negative_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Let go of <negative_object>, and simultaneously add <positive_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Introduce <positive_object> to liven the scene and remove <negative_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Push away <negative_object>, and let <positive_object> shine.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Kick out <negative_object>, and follow through with adding <positive_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Quickly add <positive_object> and sweep <negative_object> away.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Displace <negative_object>, and replace it with <positive_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Add <positive_object> to enhance the view and eliminate <negative_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Remove <negative_object>, and seamlessly integrate <positive_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Toss out <negative_object> while drawing in <positive_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Bring <positive_object> to life, while <negative_object> fades away.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Introduce <positive_object> and ensure <negative_object> disappears from sight.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Replace <negative_object> with the presence of <positive_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Add <positive_object>, making room by clearing out <negative_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Eliminate <negative_object> completely, then bring in <positive_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Set <positive_object> in motion while removing <negative_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Swap <negative_object> with <positive_object> seamlessly.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Highlight <positive_object> as you discard <negative_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Discard <negative_object> to make way for <positive_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Remove <negative_object> entirely, and position <positive_object> in its place.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Add <positive_object> and <positive_object>, and take out <negative_object> from the frame.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Replace <negative_object> by adding <positive_object> alongside <positive_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Remove <negative_object>, then introduce both <positive_object> and <positive_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"First, take <negative_object> away, then enhance with <positive_object> and <positive_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Eliminate <negative_object>, and make the scene vibrant with <positive_object> and <positive_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Replace <negative_object> by placing <positive_object> and <positive_object> in the frame.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Add <positive_object> and <positive_object> to the picture, subtracting <negative_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Clear out <negative_object>, and enrich the scene with <positive_object> and <positive_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Bring in two elements: <positive_object> and <positive_object>, while removing <negative_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Take out <negative_object>, and complement the scene by adding <positive_object> and <positive_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Bring <positive_object> into the spotlight and discard <negative_object> and <negative_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Eliminate both <negative_object> and <negative_object>, while placing <positive_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Add <positive_object> into the mix, after clearing <negative_object> and <negative_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Clear <negative_object> and <negative_object> from view, and enhance with <positive_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Remove two objects, <negative_object> and <negative_object>, and replace them with <positive_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Make way for <positive_object> by eliminating <negative_object> and <negative_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Add <positive_object>, but only after removing <negative_object> and <negative_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Take away <negative_object> and <negative_object>, and gracefully add <positive_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Eliminate two items: <negative_object> and <negative_object>, then introduce <positive_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Get rid of <negative_object> and <negative_object>, and bring in <positive_object> to balance the scene.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Add <positive_object>, <positive_object>, and <positive_object>, while clearing <negative_object>, <negative_object>, and <negative_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Introduce three new elements: <positive_object>, <positive_object>, and <positive_object>, removing <negative_object>, <negative_object>, and <negative_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Replace <negative_object>, <negative_object>, and <negative_object> with <positive_object>, <positive_object>, and <positive_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Remove three objects—<negative_object>, <negative_object>, and <negative_object>—and substitute them with <positive_object>, <positive_object>, and <positive_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Include <positive_object>, <positive_object>, and <positive_object>, while completely removing <negative_object>, <negative_object>, and <negative_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Discard <negative_object>, <negative_object>, and <negative_object>, and complement the scene with <positive_object>, <positive_object>, and <positive_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Add three items: <positive_object>, <positive_object>, and <positive_object>, while eliminating <negative_object>, <negative_object>, and <negative_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Erase <negative_object>, <negative_object>, and <negative_object>, replacing them with <positive_object>, <positive_object>, and <positive_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"First, remove <negative_object>, <negative_object>, and <negative_object>, then position <positive_object>, <positive_object>, and <positive_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Remove all three: <negative_object>, <negative_object>, and <negative_object>, and enrich with <positive_object>, <positive_object>, and <positive_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Replace <negative_object> with the beauty of <positive_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Include <positive_object> in the picture while <negative_object> vanishes from it.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Focus on <positive_object>, as <negative_object> is removed in the process.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Get <negative_object> out of sight and let <positive_object> fill the void.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Add <positive_object>, allowing no space for <negative_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Clear <negative_object> from the background, and make room for <positive_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Eliminate <negative_object> and shift attention to <positive_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Start by introducing <positive_object>, and smoothly fade out <negative_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Shift focus to <positive_object>, replacing <negative_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"First, take away <negative_object>, and then add <positive_object> to the scene.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Place <positive_object> and <positive_object> in focus, and remove <negative_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Discard <negative_object>, and in its place, set <positive_object> and <positive_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Replace <negative_object> with the presence of <positive_object> and <positive_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Add <positive_object>, <positive_object>, and <positive_object>, and let <negative_object>, <negative_object>, and <negative_object> disappear.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Replace the trio of <negative_object>, <negative_object>, and <negative_object> with <positive_object>, <positive_object>, and <positive_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Swap <negative_object>, <negative_object>, and <negative_object> with <positive_object>, <positive_object>, and <positive_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Subtract <negative_object> and <negative_object>, but enrich the scene with <positive_object> and <positive_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Highlight <positive_object>, <positive_object>, and <positive_object>, while removing <negative_object>, <negative_object>, and <negative_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Take <negative_object> and <negative_object> out of the picture, and bring in <positive_object> and <positive_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Remove <negative_object>, and complement it with two new additions: <positive_object> and <positive_object>.",
+        "model":"GPT-4o"
+    },
+    {
+        "template":"Place <positive_object> while simultaneously extracting <negative_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Incorporate <positive_object> and <positive_object>, then delete <negative_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Begin with removing <negative_object>, <negative_object>, and <negative_object>, then add <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Swap <negative_object> with <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Transform the scene by adding <positive_object> and eliminating <negative_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"First introduce <positive_object>, next <positive_object>, finally remove <negative_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Clear away <negative_object>, then populate with <positive_object> and <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Start by inserting <positive_object>, conclude by removing <negative_object> and <negative_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Replace <negative_object> with <positive_object> and <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Add a touch of <positive_object> while removing traces of <negative_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Begin with <positive_object>, remove <negative_object>, then add <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Take out <negative_object> and <negative_object>, then bring in <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Put <positive_object> in place of <negative_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Include <positive_object>, <positive_object>, <positive_object> after removing <negative_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Start fresh by removing <negative_object> before adding <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Integrate <positive_object> while disposing of <negative_object> and <negative_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Make room for <positive_object> by removing <negative_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Set <positive_object> in place while clearing <negative_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Position <positive_object> and <positive_object> after eliminating <negative_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Remove the combination of <negative_object> and <negative_object>, then add <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Introduce a trio of <positive_object>, <positive_object>, <positive_object> while removing <negative_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Clear out <negative_object>, then arrange <positive_object> and <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Start by positioning <positive_object>, then remove both <negative_object> and <negative_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Add <positive_object> in the space where <negative_object> was",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Remove the pair of <negative_object> and <negative_object>, then insert <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Place <positive_object> after clearing away <negative_object> and <negative_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Begin with <positive_object>, remove <negative_object>, finish with <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Take away <negative_object>, then arrange <positive_object> and <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Insert <positive_object> while removing the duo of <negative_object> and <negative_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Add <positive_object> after eliminating <negative_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Remove <negative_object>, then position both <positive_object> and <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Clear <negative_object> to make way for <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Put in place <positive_object> after removing <negative_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Start by adding <positive_object>, then remove both <negative_object> and <negative_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Include <positive_object> while taking away <negative_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Position <positive_object> after clearing out <negative_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Remove the trio of <negative_object>, <negative_object>, <negative_object>, then add <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Insert <positive_object> and <positive_object> while removing <negative_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Take out <negative_object>, then place <positive_object> and <positive_object>`",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Add <positive_object> after removing both <negative_object> and <negative_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Begin with removing <negative_object>, then add the pair of <positive_object> and <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Place <positive_object> where <negative_object> used to be",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Remove <negative_object> to accommodate <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Insert <positive_object> after clearing away <negative_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Take away <negative_object>, then position <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Add <positive_object> while removing both <negative_object> and <negative_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Clear out <negative_object> before adding <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Position <positive_object> after removing <negative_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Remove <negative_object>, then insert the duo of <positive_object> and <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Place <positive_object> after taking away <negative_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Start with <positive_object>, then remove <negative_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Add <positive_object> while clearing <negative_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Remove <negative_object> before positioning <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Insert <positive_object> after eliminating <negative_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Take away <negative_object> to add <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Position <positive_object> once <negative_object> is gone",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Clear <negative_object> then add <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Remove <negative_object> to place <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Add <positive_object> after clearing out <negative_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Insert <positive_object> where <negative_object> was",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Take away <negative_object> to position <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Remove <negative_object> before adding <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Place <positive_object> after eliminating <negative_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Clear out <negative_object> to insert <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Position <positive_object> once <negative_object> is removed",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Add <positive_object> after taking away <negative_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Remove <negative_object> to make space for <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Insert <positive_object> after clearing <negative_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Take out <negative_object> to add <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Place <positive_object> where <negative_object> once was",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Remove <negative_object> then position <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Add <positive_object> after eliminating <negative_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Clear away <negative_object> to insert <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Position <positive_object> after removing <negative_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Take away <negative_object> before adding <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Insert <positive_object> once <negative_object> is gone",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Remove <negative_object> to place <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Add <positive_object> after clearing <negative_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Position <positive_object> where <negative_object> was",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Clear out <negative_object> to add <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Take away <negative_object> then insert <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Remove <negative_object> to position <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Place <positive_object> after eliminating <negative_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Add <positive_object> once <negative_object> is removed",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Insert <positive_object> after taking away <negative_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Clear <negative_object> to position <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Remove <negative_object> before placing <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Add <positive_object> where <negative_object> was",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Take out <negative_object> to insert <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Position <positive_object> after clearing <negative_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Remove <negative_object> to add <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Place <positive_object> once <negative_object> is gone",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Insert <positive_object> after removing <negative_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Clear away <negative_object> to position <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Take away <negative_object> then add <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Remove <negative_object> before inserting <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Add <positive_object> after eliminating <negative_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Position <positive_object> where <negative_object> was",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Clear out <negative_object> then place <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Insert <positive_object> after taking away <negative_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Place <positive_object> while simultaneously extracting <negative_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Incorporate <positive_object> and <positive_object>, then delete <negative_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Begin with removing <negative_object>, <negative_object>, and <negative_object>, then add <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Swap <negative_object> with <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Transform the scene by adding <positive_object> and eliminating <negative_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"First introduce <positive_object>, next <positive_object>, finally remove <negative_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Clear away <negative_object>, then populate with <positive_object> and <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Start by inserting <positive_object>, conclude by removing <negative_object> and <negative_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Replace <negative_object> with <positive_object> and <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Add a touch of <positive_object> while removing traces of <negative_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Begin with <positive_object>, remove <negative_object>, then add <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Take out <negative_object> and <negative_object>, then bring in <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Put <positive_object> in place of <negative_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Include <positive_object>, <positive_object>, <positive_object> after removing <negative_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Start fresh by removing <negative_object> before adding <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Integrate <positive_object> while disposing of <negative_object> and <negative_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Make room for <positive_object> by removing <negative_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Set <positive_object> in place while clearing <negative_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Position <positive_object> and <positive_object> after eliminating <negative_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Remove the combination of <negative_object> and <negative_object>, then add <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Introduce a trio of <positive_object>, <positive_object>, <positive_object> while removing <negative_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Clear out <negative_object>, then arrange <positive_object> and <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Start by positioning <positive_object>, then remove both <negative_object> and <negative_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Add <positive_object> in the space where <negative_object> was",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Remove the pair of <negative_object> and <negative_object>, then insert <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Place <positive_object> after clearing away <negative_object> and <negative_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Begin with <positive_object>, remove <negative_object>, finish with <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Take away <negative_object>, then arrange <positive_object> and <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Insert <positive_object> while removing the duo of <negative_object> and <negative_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Add <positive_object> after eliminating <negative_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Remove <negative_object>, then position both <positive_object> and <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Clear <negative_object> to make way for <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Put in place <positive_object> after removing <negative_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Start by adding <positive_object>, then remove both <negative_object> and <negative_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Include <positive_object> while taking away <negative_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Position <positive_object> after clearing out <negative_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Remove the trio of <negative_object>, <negative_object>, <negative_object>, then add <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Insert <positive_object> and <positive_object> while removing <negative_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Take out <negative_object>, then place <positive_object> and <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Add <positive_object> after removing both <negative_object> and <negative_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Begin with removing <negative_object>, then add the pair of <positive_object> and <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Place <positive_object> where <negative_object> used to be",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Remove <negative_object> to accommodate <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Insert <positive_object> after clearing away <negative_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Take away <negative_object>, then position <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Add <positive_object> while removing both <negative_object> and <negative_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Clear out <negative_object> before adding <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Position <positive_object> after removing <negative_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Remove <negative_object>, then insert the duo of <positive_object> and <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Place <positive_object> after taking away <negative_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Add <positive_object> while clearing <negative_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Remove <negative_object> before positioning <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Insert <positive_object> after eliminating <negative_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Take away <negative_object> to add <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Position <positive_object> once <negative_object> is gone",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Clear <negative_object> then add <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Remove <negative_object> to place <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Add <positive_object> after clearing out <negative_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Insert <positive_object> where <negative_object> was",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Take away <negative_object> to position <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Remove <negative_object> before adding <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Place <positive_object> after eliminating <negative_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Clear out <negative_object> to insert <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Position <positive_object> once <negative_object> is removed",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Add <positive_object> after taking away <negative_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Remove <negative_object> to make space for <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Insert <positive_object> after clearing <negative_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Take out <negative_object> to add <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Place <positive_object> where <negative_object> once was",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Remove <negative_object> then position <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Add <positive_object> after eliminating <negative_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Clear away <negative_object> to insert <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Position <positive_object> after removing <negative_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Take away <negative_object> before adding <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Insert <positive_object> once <negative_object> is gone",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Remove <negative_object> to place <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Add <positive_object> after clearing <negative_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Position <positive_object> where <negative_object> was",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Clear out <negative_object> to add <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Take away <negative_object> then insert <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Remove <negative_object> to position <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Place <positive_object> after eliminating <negative_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Add <positive_object> once <negative_object> is removed",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Insert <positive_object> after taking away <negative_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Clear <negative_object> to position <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Remove <negative_object> before placing <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Add <positive_object> where <negative_object> was",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Take out <negative_object> to insert <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Position <positive_object> after clearing <negative_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Remove <negative_object> to add <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Place <positive_object> once <negative_object> is gone",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Insert <positive_object> after removing <negative_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Clear away <negative_object> to position <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Take away <negative_object> then add <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Remove <negative_object> before inserting <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Add <positive_object> after eliminating <negative_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Position <positive_object> where <negative_object> was",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Clear out <negative_object> then place <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Insert <positive_object> after taking away <negative_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Substitute <negative_object> with a combination of <positive_object> and <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Exchange <negative_object> and <negative_object> for <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Morph the scene by removing <negative_object> and introducing <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Transition from <negative_object> to <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Phase out <negative_object> while phasing in <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Convert the space from <negative_object> to <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Modify by eliminating <negative_object> and incorporating <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Transform <negative_object> into <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Shift from <negative_object> to <positive_object> and <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Evolve the scene by removing <negative_object> and adding <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Alter by extracting <negative_object> and introducing <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Metamorphose <negative_object> into <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Switch out <negative_object> for <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Trade <negative_object> for <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Cycle out <negative_object> and cycle in <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Rotate <negative_object> with <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Supplant <negative_object> with <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Supersede <negative_object> with <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Transpose <negative_object> with <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Substitute a trio of <negative_object>, <negative_object>, <negative_object> with <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"First eliminate <negative_object>, then introduce <positive_object> and <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Begin by removing <negative_object>, conclude with adding <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Start with deletion of <negative_object>, end with addition of <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Initially remove <negative_object>, subsequently add <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Commence with removing <negative_object>, finish by adding <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Launch with elimination of <negative_object>, complete with <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Open by removing <negative_object>, close with adding <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Lead with removal of <negative_object>, follow with <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"First phase: remove <negative_object>, second phase: add <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Step 1: eliminate <negative_object>, Step 2: introduce <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Part 1: remove <negative_object>, Part 2: add <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Phase out <negative_object> then phase in <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Clear <negative_object> followed by placement of <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Extract <negative_object> then inject <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Purge <negative_object> then install <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Erase <negative_object> then draw in <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Wipe away <negative_object> then paint in <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Strip away <negative_object> then layer in <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Peel off <negative_object> then apply <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Scrub out <negative_object> then brush in <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Dissolve <negative_object> then materialize <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Fade out <negative_object> then fade in <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Eradicate <negative_object> then establish <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Abolish <negative_object> then institute <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Expunge <negative_object> then implement <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Obliterate <negative_object> then construct <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Demolish <negative_object> then build <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Destroy <negative_object> then create <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Dismantle <negative_object> then assemble <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Break down <negative_object> then compose <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Deconstruct <negative_object> then fabricate <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Disassemble <negative_object> then piece together <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Tear down <negative_object> then set up <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Pull out <negative_object> then put in <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Draw out <negative_object> then slide in <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Push out <negative_object> then bring in <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Force out <negative_object> then ease in <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Drive out <negative_object> then welcome in <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Chase away <negative_object> then usher in <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Banish <negative_object> then summon <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Exile <negative_object> then import <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Deport <negative_object> then introduce <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Evacuate <negative_object> then populate with <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Void <negative_object> then fill with <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Empty of <negative_object> then stock with <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Drain away <negative_object> then replenish with <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Flush out <negative_object> then pour in <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Clean out <negative_object> then load in <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Sweep away <negative_object> then deposit <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Brush off <negative_object> then lay down <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Dust off <negative_object> then settle in <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Polish away <negative_object> then embed <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Buff out <negative_object> then inlay <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Smooth away <negative_object> then imprint <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Sand away <negative_object> then stamp in <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"File away <negative_object> then press in <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Pare away <negative_object> then mold in <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Trim away <negative_object> then shape in <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Cut away <negative_object> then form <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Clip away <negative_object> then fashion <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Prune away <negative_object> then cultivate <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Crop out <negative_object> then plant <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Weed out <negative_object> then seed <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Root out <negative_object> then grow <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Pluck out <negative_object> then sow <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Extract <negative_object> then germinate <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Uproot <negative_object> then transplant <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Dig out <negative_object> then bed in <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Mine out <negative_object> then deposit <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Quarry out <negative_object> then install <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Excavate <negative_object> then establish <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Dredge out <negative_object> then anchor <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Scoop out <negative_object> then settle <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Bail out <negative_object> then secure <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Pump out <negative_object> then inject <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Siphon off <negative_object> then infuse <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Draw off <negative_object> then introduce <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Leach out <negative_object> then instill <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Filter out <negative_object> then incorporate <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    },
+    {
+        "template":"Strain out <negative_object> then blend in <positive_object>",
+        "model":"Claude 3.5 Sonnet"
+    }
+]
