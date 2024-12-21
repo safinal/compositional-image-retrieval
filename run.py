@@ -19,10 +19,10 @@ def main():
     config_path = args.config
     config = ConfigManager(config_path)  # Initialize the singleton with the config file
 
-    model = Model(model_name=config["model"]["name"], pretrained=config["model"]["pretrained_weights"]).to(config["training"]["device"])
-    criterion = InfoNCELoss(temperature=config.loss_temperature)
-    optimizer = torch.optim.AdamW(model.parameters(), lr=config["training"]["device"], weight_decay=config["training"]["weight_decay"])
-    scheduler = torch.optim.lr_scheduler.CosineAnnealingWarmRestarts(optimizer, T_0=config["training"]["scheduler_t_0"], T_mult=config["training"]["scheduler_t_mult"])
+    model = Model(model_name=config.get("model")["name"], pretrained=config.get("model")["pretrained_weights"]).to(config.get("training")["device"])
+    criterion = InfoNCELoss(temperature=config.get("training")["loss_temperature"])
+    optimizer = torch.optim.AdamW(model.parameters(), lr=config.get("training")["learning_rate"], weight_decay=config.get("training")["weight_decay"])
+    scheduler = torch.optim.lr_scheduler.CosineAnnealingWarmRestarts(optimizer, T_0=config.get("training")["scheduler_t_0"], T_mult=config.get("training")["scheduler_t_mult"])
 
 
     train_dataset, train_loader, val_dataset, val_loader, test_dataset, test_loader = create_train_val_test_datasets_and_loaders(
@@ -34,6 +34,7 @@ def main():
         model,
         train_loader,
         test_dataset,
+        val_dataset,
         criterion,
         optimizer,
         scheduler

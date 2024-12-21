@@ -173,8 +173,8 @@ def create_train_val_test_datasets_and_loaders(tokenizer, transform=None):
             num_workers=num_workers,
         )
     test_dataset = RetrievalDataset(
-        img_dir_path=ConfigManager().get("path")["test_root_dir"],
-        annotations_file_path=ConfigManager().get("path")["test_annotations_file_path"],
+        img_dir_path=ConfigManager().get("paths")["test_root_dir"],
+        annotations_file_path=ConfigManager().get("paths")["test_annotations_file_path"],
         split='test',
         transform=transform if transform is not None else default_test_transform,
         tokenizer=tokenizer

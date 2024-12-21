@@ -3,7 +3,7 @@ from tqdm import tqdm
 import os
 
 from src.config import ConfigManager
-from evaluate import evaluate
+from src.evaluate import evaluate
 
 
 def train_epoch(model, train_loader, criterion, optimizer, device):

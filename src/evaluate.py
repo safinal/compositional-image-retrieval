@@ -1,5 +1,5 @@
 import numpy as np
-from generate_embeds import encode_database, encode_queries
+from src.generate_embeds import encode_database, encode_queries
 from sklearn.metrics.pairwise import cosine_similarity
 
 

@@ -5,13 +5,7 @@ import torch
 from tqdm import tqdm
 
 from src.config import ConfigManager
-from token_classifier import load_token_classifier, predict
-
-
-token_classifier, token_classifier_tokenizer = load_token_classifier(
-    ConfigManager().get("path")["pretrained_token_classifier_path"],
-    ConfigManager().get("training")["device"]
-)
+from src.token_classifier import load_token_classifier, predict
 
 
 def encode_queries(model, df: pd.DataFrame) -> np.ndarray:
@@ -26,6 +20,10 @@ def encode_queries(model, df: pd.DataFrame) -> np.ndarray:
     Returns:
     np.ndarray: Embeddings array (num_queries, embedding_dim)
     """
+    token_classifier, token_classifier_tokenizer = load_token_classifier(
+        ConfigManager().get("paths")["pretrained_token_classifier_path"],
+        ConfigManager().get("training")["device"]
+    )
     model.eval()
     all_embeddings = []
     batch_size = ConfigManager().get("training")["batch_size"]

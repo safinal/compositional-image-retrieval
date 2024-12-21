@@ -3,15 +3,15 @@ model:
   pretrained_weights: "datacomp1b"
 
 training:
-  batch_size: 64
+  batch_size: 256
   num_workers: 128
   num_epochs: 5
-  learning_rate: 1e-4
+  learning_rate: 0.0001
   weight_decay: 0.01
   loss_temperature: 0.07
   scheduler_t_0: 5
   scheduler_t_mult: 2
-  split_ratio: 1.0
+  split_ratio: 0.9
   device: "cuda"
   
 paths:
