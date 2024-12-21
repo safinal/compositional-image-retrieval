@@ -68,7 +68,7 @@ def train(model, train_loader, test_dataset, val_dataset, criterion, optimizer, 
         test_acc = 100*evaluate(model, test_dataset)
         val_acc = 100*evaluate(model, val_dataset)
         print(f"Test Accuracy: {test_acc}")
-        print(f"Zero-shot Val Accuracy: {val_acc}\n")
+        print(f"Val Accuracy: {val_acc}\n")
         scheduler.step()
         model.save(os.path.join(os.getcwd(), f"weights_epoch_{epoch + 1}.pth"))
         if test_acc + val_acc > best_acc:
