@@ -55,17 +55,22 @@ def train_epoch(model, train_loader, criterion, optimizer, device):
 
 
 
-def train(model, train_loader, test_dataset, criterion, optimizer, scheduler):
+def train(model, train_loader, test_dataset, val_dataset, criterion, optimizer, scheduler):
     model.set_param_trainable_mode(model.feature_extractor.visual.head, True)
-    best_test_acc = 100*evaluate(model, test_dataset)
-    print(f"Zero-shot Test Accuracy: {best_test_acc}\n")
+    test_acc = 100*evaluate(model, test_dataset)
+    val_acc = 100*evaluate(model, val_dataset)
+    best_acc = test_acc + val_acc
+    print(f"Zero-shot Test Accuracy: {test_acc}\n")
+    print(f"Zero-shot Val Accuracy: {val_acc}\n")
     for epoch in range(config.num_epochs):
         print(f"\nEpoch {epoch+1}/{config.num_epochs}")
         train_epoch(model, train_loader, criterion, optimizer, config.device)
         test_acc = 100*evaluate(model, test_dataset)
+        val_acc = 100*evaluate(model, val_dataset)
         print(f"Test Accuracy: {test_acc}")
+        print(f"Zero-shot Val Accuracy: {val_acc}\n")
         scheduler.step()
         model.save(os.path.join(os.getcwd(), f"weights_epoch_{epoch + 1}.pth"))
-        if test_acc > best_test_acc:
+        if test_acc + val_acc > best_acc:
             model.save(os.path.join(os.getcwd(), f"best_model_epoch_{epoch + 1}.pth"))
-            best_test_acc = test_acc
+            best_acc = test_acc + val_acc
