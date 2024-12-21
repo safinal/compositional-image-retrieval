@@ -22,7 +22,7 @@ def main():
     model = Model(model_name=config["model"]["name"], pretrained=config["model"]["pretrained_weights"]).to(config["training"]["device"])
     criterion = InfoNCELoss(temperature=config.loss_temperature)
     optimizer = torch.optim.AdamW(model.parameters(), lr=config["training"]["device"], weight_decay=config["training"]["weight_decay"])
-    scheduler = torch.optim.lr_scheduler.CosineAnnealingWarmRestarts(optimizer, T_0=config.scheduler_t_0, T_mult=config.scheduler_t_mult)
+    scheduler = torch.optim.lr_scheduler.CosineAnnealingWarmRestarts(optimizer, T_0=config["training"]["scheduler_t_0"], T_mult=config["training"]["scheduler_t_mult"])
 
 
     train_dataset, train_loader, val_dataset, val_loader, test_dataset, test_loader = create_train_val_test_datasets_and_loaders(
