@@ -53,7 +53,7 @@ class RetrievalDataset(torch.utils.data.Dataset):
         return self.annotations
     
     def load_database(self):
-        return self.annotations[["target_image"]]
+        return pd.DataFrame({'target_image': self.annotations["target_image"].unique()})
     
     def convert_image_names_to_path(self, df):
         df["query_image"] = self.img_dir_path + "/" + df["query_image"]
