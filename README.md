@@ -37,7 +37,7 @@ An example output demonstrates the DistilBERT model’s capability to identify a
 
 `other: take`, `other: out`, `other: the`, `neg: jacket`, `other: and`, `other: the`, `neg: sketchpad`, `other: ;`, `other: add`, `other: a`, `pos: laptop`, `other: ,`, `other: a`, `pos: watering`, `pos: can`, `other: ,`, `other: and`, `other: a`, `pos: basket`, `other: .`
 
-Using this classification, we generate embeddings for each positive and negative object using a template, *"A photo of a \<object>"*. These embeddings are later used to refine the query image embedding.
+Using this classification, we generate embeddings for each positive and negative object using a template, *"a photo of a \<object>."*. These embeddings are later used to refine the query image embedding.
 
 ### 3. **Fine-Tuned ViTamin for Multi-Modal Feature Extraction**
 We finetuned a variant of the [ViTamin](https://beckschen.github.io/vitamin) model from [OpenCLIP](https://github.com/mlfoundations/open_clip), a robust vision-language model, as the backbone for extracting features from both textual and visual modalities. The core innovation lies in modifying the query image embedding:
