@@ -84,7 +84,6 @@ def encode_database(model, df: pd.DataFrame) -> np.ndarray :
     for i in tqdm(range(0, len(df), batch_size)):
         target_imgs = torch.stack([model.processor(Image.open(target_image_path)) for target_image_path in df['target_image'][i:i+batch_size]]).to(device)
         with torch.no_grad():
-            # target_imgs_embedding = model.encode_database_image(target_imgs)
             target_imgs_embedding = model.feature_extractor.encode_image(target_imgs)
         target_imgs_embedding = torch.nn.functional.normalize(target_imgs_embedding, dim=1, p=2)
         all_embeddings.append(target_imgs_embedding.detach().cpu().numpy())
