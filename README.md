@@ -21,15 +21,38 @@ The figure below serves as an example of this task:
 
 ## 🚀 Our Approach
 
+Our approach leverages natural language processing and vision-language models to achieve compositional retrieval in an efficient and innovative manner, while adhering to contest constraints.
+
+### 1. **BERT Language Model for Object Identification from Query Text**
+We fine-tuned a BERT language model on a curated dataset generated using large language models (e.g., GPT, Gemini). The model classifies tokens in the query text into three categories:
+- **Positive (pos):** Objects to be added to the query image.
+- **Negative (neg):** Objects to be removed from the query image.
+- **Other:** Articles, verbs, punctuations, or irrelevant terms.
+
+An example output demonstrates the BERT model’s capability to identify actionable tokens:
+>*"Take out the jacket and the sketchpad; add a laptop, a watering can, and a basket."*
+
+`other: take`, `other: out`, `other: the`, `neg: jacket`, `other: and`, `other: the`, `neg: sketchpad`, `other: ;`, `other: add`, `other: a`, `pos: laptop`, `other: ,`, `other: a`, `pos: watering`, `pos: can`, `other: ,`, `other: and`, `other: a`, `pos: basket`, `other: .`
+
+Using this classification, we generate embeddings for each positive and negative object using a template, *"A photo of a \<object>"*. These embeddings are later used to refine the query image embedding.
+
+### 2. **Fine-Tuned OpenCLIP for Multi-Modal Feature Extraction**
+We employed [OpenCLIP](https://github.com/mlfoundations/open_clip), a robust vision-language model, as the backbone for extracting features from both textual and visual modalities. The core innovation lies in modifying the query image embedding:
+- **Adding** embeddings of positive objects derived from the query text.
+- **Subtracting** embeddings of negative objects.
+
+This process dynamically adjusts the query embedding to closely represent the target image's characteristics. By avoiding reliance on object detection, image captioning, or directly-used large language models, our approach remains computationally efficient while adhering to contest constraints.
+
+
 ## 🏆 Results
 
 Our solution for this Challenge achieved outstanding results. The evaluation metric for this challenge is **Accuracy**, with models tested on a private test dataset. Our model achieved the **highest score**, outperforming competitors with a noticeable margin.
 
-The table below presents a summary of the top 10 teams and their respective accuracy scores:
+The table below presents a summary of the Top 🔟 teams and their respective accuracy scores:
 
 | **Rank** | **Team**                             | **Accuracy (%)** |
 |----------|--------------------------------------|------------------|
-| 1        | **No Trust Issues Here (Our Team)**  | **95.38**        |
+| 1        | **No Trust Issues Here (Our Team)**  | **95.38** 🔝     |
 | 2        | Pileh                                | 84.61            |
 | 3        | AI Guardians of Trust                | 88.59            |
 | 4        | AIUoK                                | 87.30            |
@@ -39,8 +62,6 @@ The table below presents a summary of the top 10 teams and their respective accu
 | 8        | AlphaQ                               | 84.50            |
 | 9        | Tempest                              | 83.90            |
 | 10       | Scientific                           | 82.70            |
-
-
 
 
 ## ⚙️ Model Constraints
@@ -54,3 +75,42 @@ The table below presents a summary of the top 10 teams and their respective accu
 
 - **✅ Allowed:**  
   - ✔️ Pre-trained Vision-Language Models (e.g., CLIP), if fine-tuned for this task  
+
+## 🏃🏻‍♂️‍➡️ Steps to Set Up and Run
+
+Follow these instructions to set up your environment and execute the training pipeline.
+
+### 1. Clone the Repository
+```bash
+git clone git@github.com:safinal/compositional-retrieval.git
+cd compositional-retrieval
+```
+### 2. Set Up the Environment
+We recommend using a virtual environment to manage dependencies.
+
+Using ```venv```:
+```bash
+python -m venv venv
+source venv/bin/activate       # On macOS/Linux
+venv\Scripts\activate          # On Windows
+```
+Using ```conda```:
+```bash
+conda create --name compositional-retrieval python=3.8 -y
+conda activate compositional-retrieval
+```
+### 3. Install Dependencies
+Install all required libraries from the ```requirements.txt``` file:
+```bash
+pip install -r requirements.txt
+```
+### 4. Train the Model
+Run the training pipeline with the following command:
+```bash
+python run.py --config ./config/config.yaml
+```
+## 🫶🏻 Acknowledgment
+We thank the creators of [OpenCLIP](https://github.com/mlfoundations/open_clip) for their invaluable contributions to the development of vision-language models.
+
+## 🤝🏼 Contributions
+We welcome contributions from the community to make this repository better!
