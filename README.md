@@ -2,7 +2,7 @@
 *Contributors: [Ali Nafisi](https://safinal.github.io/), [Hossein Shakibania](https://scholar.google.com/citations?user=huveR90AAAAJ&hl=en&authuser=1)*
 
 ## 🔍 Overview
-This repository contains our solution for the Compositional Retrieval Challenge, part of the [Rayan International AI Contest](https://ai.rayan.global). The challenge aims to develop a system capable of retrieving the most relevant image from a database by understanding a combination of visual and textual inputs.
+This repository contains our solution for the Compositional Retrieval Challenge, part of the [**Rayan International AI Contest**](https://ai.rayan.global). The challenge aims to develop a system capable of retrieving the most relevant image from a database by understanding a combination of visual and textual inputs.
 
 ## 🎯 Challenge Objective
 
@@ -23,25 +23,28 @@ The figure below serves as an example of this task:
 
 Our approach leverages natural language processing and vision-language models to achieve compositional retrieval in an efficient and innovative manner, while adhering to contest constraints.
 
-### 1. **BERT Language Model for Object Identification from Query Text**
-We fine-tuned a BERT language model on a curated dataset generated using large language models (e.g., GPT, Gemini). The model classifies tokens in the query text into three categories:
+### 1. **Curated Dataset for Training**
+To create a high-quality dataset tailored for our task, we utilized free versions of LLMs such as Gemini, GPT, and Claude. These models generated 635 unique templates resembling the Query Text, available in the `prompt_templates.json` file. Using predefined objects, we expanded these templates into 15 variations each, resulting in a dataset of 9,525 instances. This dataset was the foundation for training our BERT-based model, described in the next section.
+
+### 2. **DistilBERT Language Model for Object Identification from Query Text**
+We wanted to have a model that can identify the objects that will be added and removed from the query image and directly impact the purpose image. Therefore,  we fine-tuned the [DistilBERT](https://arxiv.org/abs/1910.01108) language model on the curated dataset. The model classifies tokens in the query text into three categories:
 - **Positive (pos):** Objects to be added to the query image.
 - **Negative (neg):** Objects to be removed from the query image.
 - **Other:** Articles, verbs, punctuations, or irrelevant terms.
 
-An example output demonstrates the BERT model’s capability to identify actionable tokens:
+An example output demonstrates the DistilBERT model’s capability to identify actionable tokens:
 >*"Take out the jacket and the sketchpad; add a laptop, a watering can, and a basket."*
 
 `other: take`, `other: out`, `other: the`, `neg: jacket`, `other: and`, `other: the`, `neg: sketchpad`, `other: ;`, `other: add`, `other: a`, `pos: laptop`, `other: ,`, `other: a`, `pos: watering`, `pos: can`, `other: ,`, `other: and`, `other: a`, `pos: basket`, `other: .`
 
 Using this classification, we generate embeddings for each positive and negative object using a template, *"A photo of a \<object>"*. These embeddings are later used to refine the query image embedding.
 
-### 2. **Fine-Tuned OpenCLIP for Multi-Modal Feature Extraction**
-We employed [OpenCLIP](https://github.com/mlfoundations/open_clip), a robust vision-language model, as the backbone for extracting features from both textual and visual modalities. The core innovation lies in modifying the query image embedding:
+### 3. **Fine-Tuned ViTamin for Multi-Modal Feature Extraction**
+We finetuned a variant of the [ViTamin](https://beckschen.github.io/vitamin) model from [OpenCLIP](https://github.com/mlfoundations/open_clip), a robust vision-language model, as the backbone for extracting features from both textual and visual modalities. The core innovation lies in modifying the query image embedding:
 - **Adding** embeddings of positive objects derived from the query text.
 - **Subtracting** embeddings of negative objects.
 
-This process dynamically adjusts the query embedding to closely represent the target image's characteristics. By avoiding reliance on object detection, image captioning, or directly-used large language models, our approach remains computationally efficient while adhering to contest constraints.
+This process dynamically adjusts the query embedding to closely represent the target image's characteristics. By avoiding reliance on object detection, image captioning, or directly-used LLMs, our approach remains computationally efficient while adhering to contest constraints.
 
 
 ## 🏆 Results
@@ -52,7 +55,7 @@ The table below presents a summary of the Top 🔟 teams and their respective ac
 
 | **Rank** | **Team**                             | **Accuracy (%)** |
 |----------|--------------------------------------|------------------|
-| 1        | **No Trust Issues Here (Our Team)**  | **95.38** 🔝     |
+| 1        | **No Trust Issues Here (Our Team)**  | **95.38**        |
 | 2        | Pileh                                | 84.61            |
 | 3        | AI Guardians of Trust                | 88.59            |
 | 4        | AIUoK                                | 87.30            |
@@ -110,7 +113,7 @@ Run the training pipeline with the following command:
 python run.py --config ./config/config.yaml
 ```
 ## 🫶🏻 Acknowledgment
-We thank the creators of [OpenCLIP](https://github.com/mlfoundations/open_clip) for their invaluable contributions to the development of vision-language models.
+We thank the authors of [DistilBERT](https://arxiv.org/abs/1910.01108) and [ViTamin](https://beckschen.github.io/vitamin) and the creators of [OpenCLIP](https://github.com/mlfoundations/open_clip) for their invaluable contributions to the development of vision-language models.
 
 ## 🤝🏼 Contributions
 We welcome contributions from the community to make this repository better!
