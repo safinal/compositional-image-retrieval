@@ -34,7 +34,7 @@ An example output demonstrates the BERT model’s capability to identify actiona
 
 `other: take`, `other: out`, `other: the`, `neg: jacket`, `other: and`, `other: the`, `neg: sketchpad`, `other: ;`, `other: add`, `other: a`, `pos: laptop`, `other: ,`, `other: a`, `pos: watering`, `pos: can`, `other: ,`, `other: and`, `other: a`, `pos: basket`, `other: .`
 
-Using this classification, we generate embeddings for each positive and negative object using a template, *"A photo of a \<object>"*. These embeddings are later used to refine the query image embedding.
+Using this classification, we generate embeddings for each positive and negative object using a template, *"A photo of a \<object>."*. These embeddings are later used to refine the query image embedding.
 
 ### 2. **Fine-Tuned OpenCLIP for Multi-Modal Feature Extraction**
 We employed [OpenCLIP](https://github.com/mlfoundations/open_clip), a robust vision-language model, as the backbone for extracting features from both textual and visual modalities. The core innovation lies in modifying the query image embedding:
