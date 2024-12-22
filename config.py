@@ -2,7 +2,7 @@ import torch
 import os
 
 
-split_ratio = 1.0
+split_ratio = 0.9
 image_root_dir = os.path.join(os.getcwd(), 'dataset', 'images')
 annotations_file_path = os.path.join(os.getcwd(), 'dataset', 'data.csv')
 test_root_dir = os.path.join(os.getcwd(), 'sample_evaluation', 'images')
