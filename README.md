@@ -1,6 +1,10 @@
 # ⭐️ Compositional Retrieval Challenge
 *Contributors: [Ali Nafisi](https://safinal.github.io/), [Hossein Shakibania](https://scholar.google.com/citations?user=huveR90AAAAJ&hl=en&authuser=1)*
 
+[![Open in Spaces](https://huggingface.co/datasets/huggingface/badges/resolve/main/open-in-hf-spaces-md.svg)](https://huggingface.co/spaces/safinal/compositional-retrieval)
+![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+ 
 ## 🔍 Overview
 This repository contains our solution for the Compositional Retrieval Challenge, part of the [**Rayan International AI Contest**](https://ai.rayan.global). The challenge aims to develop a system capable of retrieving the most relevant image from a database by understanding a combination of visual and textual inputs.
 
