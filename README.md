@@ -1,4 +1,4 @@
-# ⭐️ Compositional Retrieval Challenge
+# ⭐️ Compositional Image Retrieval Challenge
 *Contributors: [Ali Nafisi](https://safinal.github.io/), [Hossein Shakibania](https://scholar.google.com/citations?user=huveR90AAAAJ&hl=en&authuser=1)*
 
 [![Open in Spaces](https://huggingface.co/datasets/huggingface/badges/resolve/main/open-in-hf-spaces-md.svg)](https://huggingface.co/spaces/safinal/compositional-retrieval)
@@ -6,7 +6,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
  
 ## 🔍 Overview
-This repository contains our solution for the Compositional Retrieval Challenge, part of the [**Rayan International AI Contest**](https://ai.rayan.global). The challenge aims to develop a system capable of retrieving the most relevant image from a database by understanding a combination of visual and textual inputs.
+This repository contains our solution for the Compositional Image Retrieval Challenge, part of the [**Rayan International AI Contest**](https://ai.rayan.global). The challenge aims to develop a system capable of retrieving the most relevant image from a database by understanding a combination of visual and textual inputs.
 
 ## 🎯 Challenge Objective
 
@@ -30,7 +30,7 @@ Our approach leverages natural language processing and vision-language models to
 ### 1. **DistilBERT Language Model for Object Identification from Query Text**
 We wanted to have a model that can identify the objects in the query text that will be added and removed from the query image, directly influencing the target image. 
 
-To create a dataset for our task, we utilized free versions of LLMs such as *Gemini, GPT, and Claude*. These models generated 635 unique templates resembling the Query Text, available in the `prompt_templates.json` file. Using predefined objects, we expanded these templates into 15 variations each, resulting in a dataset of 9,525 instances. This dataset was the foundation for training our BERT-based model, described in the next section. 
+To create a dataset for our task, we utilized free versions of LLMs such as *Gemini, GPT, and Claude*. These models generated 635 unique templates resembling the Query Text, available in the `prompt_templates.json` file. Using predefined objects, we expanded these templates into 15 variations each, resulting in a dataset of 9,525 instances.
 
 Then we fine-tuned the [DistilBERT](https://arxiv.org/abs/1910.01108) language model on the curated dataset. The model classifies tokens in the query text into three categories:
 - **Positive (pos):** Objects to be added to the query image.
@@ -113,10 +113,15 @@ Install all required libraries from the ```requirements.txt``` file:
 pip install -r requirements.txt
 ```
 ### 4. Train the Model
-Run the training pipeline with the following command:
+DistilBert:
 ```bash
-python run.py --config ./config/config.yaml
+python run.py --modelType token_cls --config ./config/token_cls_cfg.yaml
 ```
+Retrieval Model:
+```bash
+python run.py --modelType retrieval --config ./config/retrieval_cfg.yaml
+```
+
 ## 🫶🏻 Acknowledgment
 We thank the authors of [DistilBERT](https://arxiv.org/abs/1910.01108) and [ViTamin](https://beckschen.github.io/vitamin) and the creators of [OpenCLIP](https://github.com/mlfoundations/open_clip) for their invaluable contributions to the development of vision-language models.
 

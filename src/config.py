@@ -1,5 +1,6 @@
 import yaml
 
+
 class ConfigManager:
     _instance = None
 
