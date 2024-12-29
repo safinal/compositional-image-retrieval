@@ -1,6 +1,7 @@
 import numpy as np
-from src.generate_embeds import encode_database, encode_queries
 from sklearn.metrics.pairwise import cosine_similarity
+
+from src.retrieval_model.generate_embeds import encode_database, encode_queries
 
 
 def calculate_accuracy(predictions: np.ndarray, ground_truth: np.ndarray) -> float:

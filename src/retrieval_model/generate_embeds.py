@@ -5,7 +5,7 @@ import torch
 from tqdm import tqdm
 
 from src.config import ConfigManager
-from src.token_classifier import load_token_classifier, predict
+from src.retrieval_model.token_classifier import load_token_classifier, predict
 
 
 def encode_queries(model, df: pd.DataFrame) -> np.ndarray:

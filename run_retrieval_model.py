@@ -2,10 +2,10 @@ import argparse
 import torch
 
 from src.config import ConfigManager
-from src.model import Model
-from src.loss import InfoNCELoss
-from src.dataset import create_train_val_test_datasets_and_loaders
-from src.train import train
+from src.retrieval_model.model import Model
+from src.retrieval_model.loss import InfoNCELoss
+from src.retrieval_model.dataset import create_train_val_test_datasets_and_loaders
+from src.retrieval_model.train import train
 
 
 def parse_args():
