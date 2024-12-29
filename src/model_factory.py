@@ -18,7 +18,7 @@ class ModelFactory:
     def build(self):
         if self.model_type == "retrieval":
             self._build_retrieval_model()
-        elif self.model_type == "token_classification":
+        elif self.model_type == "token_cls":
             self._build_token_classification()
         else:
             raise ValueError(f"Unknown model type: {self.model_type}")
