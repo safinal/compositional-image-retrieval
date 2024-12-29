@@ -115,11 +115,11 @@ pip install -r requirements.txt
 ### 4. Train the Model
 DistilBert:
 ```bash
-python run.py --modelType token_cls --config ./config/token_cls_cfg.yaml
+python run.py --model_type token_cls --config ./config/token_cls_cfg.yaml
 ```
 Retrieval Model:
 ```bash
-python run.py --modelType retrieval --config ./config/retrieval_cfg.yaml
+python run.py --model_type retrieval --config ./config/retrieval_cfg.yaml
 ```
 
 ## 🫶🏻 Acknowledgment
