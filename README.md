@@ -25,6 +25,18 @@ The figure below serves as an example of this task:
 <img style="width: 80%; height: auto;" src="assets/task.png"/>
 </p>
 
+## ⚙️ Model Constraints
+
+- **📏 Maximum Model Size:** 4GB  
+
+- **🚫 Not Allowed in Final Model for Inference:**  
+  - ❌ Large Language Models (LLMs)  
+  - ❌ Object detection models  
+  - ❌ Pre-trained models that directly solve the task without modifications  
+
+- **✅ Allowed:**  
+  - ✔️ Pre-trained Vision-Language Models (e.g., CLIP), if fine-tuned for this task 
+
 ## 🚀 Our Approach
 
 Our approach leverages natural language processing and vision-language models to achieve compositional retrieval in an efficient and innovative manner, while adhering to contest constraints.
@@ -71,20 +83,8 @@ The table below presents a summary of the Top 🔟 teams and their respective ac
 | 7        | Persistence                          | 85.20            |
 | 8        | AlphaQ                               | 84.50            |
 | 9        | Tempest                              | 83.90            |
-| 10       | Scientific                           | 82.70            |
+| 10       | Scientific                           | 82.70            | 
 
-
-## ⚙️ Model Constraints
-
-- **📏 Maximum Model Size:** 4GB  
-
-- **🚫 Not Allowed in Final Model for Inference:**  
-  - ❌ Large Language Models (LLMs)  
-  - ❌ Object detection models  
-  - ❌ Pre-trained models that directly solve the task without modifications  
-
-- **✅ Allowed:**  
-  - ✔️ Pre-trained Vision-Language Models (e.g., CLIP), if fine-tuned for this task  
 
 ## 🏃🏻‍♂️‍➡️ Steps to Set Up and Run
 
