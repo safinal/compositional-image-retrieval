@@ -1,11 +1,11 @@
 # ⭐️ Compositional Image Retrieval Challenge
 *Contributors: [Ali Nafisi](https://safinal.github.io/), [Hossein Shakibania](https://scholar.google.com/citations?user=huveR90AAAAJ&hl=en&authuser=1)*
 
-[![Open in Spaces](https://huggingface.co/datasets/huggingface/badges/resolve/main/open-in-hf-spaces-md.svg)](https://huggingface.co/spaces/safinal/compositional-retrieval)
+[![Open in Spaces](https://huggingface.co/datasets/huggingface/badges/resolve/main/open-in-hf-spaces-md.svg)](https://huggingface.co/spaces/safinal/compositional-image-retrieval)
 [![pytorch](https://img.shields.io/badge/PyTorch-2.5.1-EE4C2C.svg?style=flat&logo=pytorch)](https://pytorch.org)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Huggine Face](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Retrieval%20Model-ffc107?color=ffc107&logoColor=white)](https://huggingface.co/safinal/rayan-phase2-q1)
-[![Huggine Face](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Token%20Classifier-ffc107?color=ffc107&logoColor=white)]([https://huggingface.co/safinal/rayan-phase2-q1](https://huggingface.co/safinal/compositional-retrieval-token-classifier))
+[![Huggine Face](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Retrieval%20Model-ffc107?color=ffc107&logoColor=white)](https://huggingface.co/safinal/compositional-image-retrieval)
+[![Huggine Face](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Token%20Classifier-ffc107?color=ffc107&logoColor=white)](https://huggingface.co/safinal/compositional-image-retrieval-token-classifier)
 
 ## 🔍 Overview
 This repository contains our solution for the Compositional Image Retrieval Challenge, part of the [**Rayan International AI Contest**](https://ai.rayan.global). The challenge aims to develop a system capable of retrieving the most relevant image from a database by understanding a combination of visual and textual inputs.
@@ -92,8 +92,8 @@ Follow these instructions to set up your environment and execute the training pi
 
 ### 1. Clone the Repository
 ```bash
-git clone git@github.com:safinal/compositional-retrieval.git
-cd compositional-retrieval
+git clone git@github.com:safinal/compositional-image-retrieval.git
+cd compositional-image-retrieval
 ```
 ### 2. Set Up the Environment
 We recommend using a virtual environment to manage dependencies.
@@ -106,8 +106,8 @@ venv\Scripts\activate          # On Windows
 ```
 Using ```conda```:
 ```bash
-conda create --name compositional-retrieval python=3.8 -y
-conda activate compositional-retrieval
+conda create --name compositional-image-retrieval python=3.8 -y
+conda activate compositional-image-retrieval
 ```
 ### 3. Install Dependencies
 Install all required libraries from the ```requirements.txt``` file:
