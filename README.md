@@ -44,7 +44,7 @@ Our approach leverages natural language processing and vision-language models to
 ### 1. **DistilBERT Language Model for Object Identification from Query Text**
 We wanted to have a model that can identify the objects in the query text that will be added and removed from the query image, directly influencing the target image. 
 
-To create a dataset for our task, we utilized free versions of LLMs such as *Gemini, GPT, and Claude*. These models generated 635 unique templates resembling the Query Text, available in the `prompt_templates.json` file. Using predefined objects, we expanded these templates into 15 variations each, resulting in a dataset of 9,525 instances.
+To create a dataset for our task, we utilized free versions of LLMs such as *Gemini 1.5 Pro, GPT-4o, and Claude 3.5 Sonnet*. These models generated 636 unique templates resembling the Query Text, which we include in `prompt_templates.json`. We also used the same models to generate 1,018 unique object descriptions, available in `objects.txt`. Using these objects, we expanded each template into 15 variations, yielding a dataset of 9,540 instances.
 
 Then we fine-tuned the [DistilBERT](https://arxiv.org/abs/1910.01108) language model on the curated dataset. The model classifies tokens in the query text into three categories:
 - **Positive (pos):** Objects to be added to the query image.
