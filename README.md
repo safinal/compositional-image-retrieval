@@ -1,7 +1,7 @@
 # ⭐️ Compositional Image Retrieval Challenge
 *Contributors: [Ali Nafisi](https://safinal.github.io/), [Hossein Shakibania](https://scholar.google.com/citations?user=huveR90AAAAJ&hl=en&authuser=1)*
 
-[![Open in Spaces](https://huggingface.co/datasets/huggingface/badges/resolve/main/open-in-hf-spaces-md.svg)](https://huggingface.co/spaces/safinal/compositional-image-retrieval)
+[![Open in Spaces](https://huggingface.co/datasets/huggingface/badges/resolve/main/open-in-hf-spaces-md.svg)](https://huggingface.co/spaces/safinal/compositional-retrieval)
 [![pytorch](https://img.shields.io/badge/PyTorch-2.5.1-EE4C2C.svg?style=flat&logo=pytorch)](https://pytorch.org)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Huggine Face](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Retrieval%20Model-ffc107?color=ffc107&logoColor=white)](https://huggingface.co/safinal/compositional-image-retrieval)
