@@ -68,7 +68,7 @@ This process dynamically adjusts the query embedding to closely represent the ta
 
 ## 🏆 Results
 
-Our solution for this Challenge achieved outstanding results. The evaluation metric for this challenge is **Accuracy**, with models tested on a private test dataset. Our model achieved the **highest score**, outperforming competitors with a noticeable margin.
+Our solution for this Challenge achieved outstanding results. The evaluation metric for this challenge is **Top-1 Retrieval Accuracy**, with models tested on a private test dataset. Our model achieved the **highest score**, outperforming competitors with a noticeable margin.
 
 The table below presents a summary of the Top 🔟 teams and their respective accuracy scores:
 
