@@ -85,6 +85,8 @@ The table below presents a summary of the Top 🔟 teams and their respective ac
 | 9        | AIUoK                                | 78.32            |
 | 10       | fatem17                              | 75.76            | 
 
+## 📄 Technical Report
+For a detailed explanation of our methodologies, experiments, and results, please refer to our full [Technical Report](https://github.com/safinal/rayan-ai-contest-solutions/blob/main/Technical_Report.pdf).
 
 ## 🏃🏻‍♂️‍➡️ Steps to Set Up and Run
 
